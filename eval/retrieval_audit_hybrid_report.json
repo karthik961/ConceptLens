@@ -1,0 +1,883 @@
+{
+  "description": "Human-judged audit of frozen retrieval results; non-exhaustive candidate pool.",
+  "count": 40,
+  "full_hit_at_3": 1,
+  "full_mrr_at_3": 0.8416666666666667,
+  "fully_relevant_precision_at_3": 0.4333333333333333,
+  "support_hit_at_3": 1,
+  "support_mrr_at_3": 0.9416666666666667,
+  "by_subject": {
+    "computer_science": {
+      "n": 18,
+      "full_hit_at_3": 1,
+      "full_mrr_at_3": 0.8333333333333334
+    },
+    "electronics": {
+      "n": 22,
+      "full_hit_at_3": 1,
+      "full_mrr_at_3": 0.8484848484848485
+    }
+  },
+  "by_category": {
+    "direct": {
+      "n": 32,
+      "full_hit_at_3": 1,
+      "full_mrr_at_3": 0.8697916666666666
+    },
+    "paraphrase": {
+      "n": 8,
+      "full_hit_at_3": 1,
+      "full_mrr_at_3": 0.7291666666666666
+    }
+  },
+  "original_gold_labeled_irrelevant": [],
+  "misses_without_fully_relevant_evidence": [],
+  "cases": [
+    {
+      "id": "R001",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "If the voltage across a fixed resistor stays the same but resistance doubles, what happens to current?",
+      "retrieved": [
+        "electronics/15_resistors_series.md",
+        "electronics/16_resistors_parallel.md",
+        "electronics/06_resistance_ohms_law.md"
+      ],
+      "grades": [
+        1,
+        0,
+        2
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 0.3333333333333333,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R002",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "Does a switch opening mean the battery is empty?",
+      "retrieved": [
+        "electronics/01_closed_circuits.md",
+        "electronics/07_battery_energy.md",
+        "electronics/14_switch_positions.md"
+      ],
+      "grades": [
+        2,
+        2,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.6666666666666666
+    },
+    {
+      "id": "R003",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "How does current divide at a junction in a parallel circuit?",
+      "retrieved": [
+        "electronics/08_current_conservation.md",
+        "electronics/09_voltage_parallel.md",
+        "electronics/03_series_parallel.md"
+      ],
+      "grades": [
+        2,
+        1,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R004",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "Do two resistors in parallel always have the same current?",
+      "retrieved": [
+        "electronics/16_resistors_parallel.md",
+        "electronics/09_voltage_parallel.md",
+        "electronics/03_series_parallel.md"
+      ],
+      "grades": [
+        1,
+        2,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 0.5,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R005",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "Why does one broken bulb turn off other bulbs in a series string?",
+      "retrieved": [
+        "electronics/01_closed_circuits.md",
+        "electronics/03_series_parallel.md",
+        "electronics/05_conductors.md"
+      ],
+      "grades": [
+        1,
+        2,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 0.5,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R006",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "What is the difference between electrical energy and electrical power?",
+      "retrieved": [
+        "electronics/11_power_energy.md",
+        "electronics/02_voltage_current.md",
+        "electronics/07_battery_energy.md"
+      ],
+      "grades": [
+        2,
+        1,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R007",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "Should a voltmeter be connected in series or in parallel?",
+      "retrieved": [
+        "electronics/12_meters.md",
+        "electronics/03_series_parallel.md",
+        "electronics/09_voltage_parallel.md"
+      ],
+      "grades": [
+        2,
+        0,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R008",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "Does a ground symbol always mean current will flow to the Earth?",
+      "retrieved": [
+        "electronics/13_ground_reference.md",
+        "electronics/02_voltage_current.md",
+        "electronics/12_meters.md"
+      ],
+      "grades": [
+        2,
+        1,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R009",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "If a switch opens in one parallel branch, must all lights turn off?",
+      "retrieved": [
+        "electronics/03_series_parallel.md",
+        "electronics/14_switch_positions.md",
+        "electronics/01_closed_circuits.md"
+      ],
+      "grades": [
+        2,
+        2,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.6666666666666666
+    },
+    {
+      "id": "R010",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "What happens to equivalent resistance when another resistor is put in series?",
+      "retrieved": [
+        "electronics/15_resistors_series.md",
+        "electronics/16_resistors_parallel.md",
+        "electronics/02_voltage_current.md"
+      ],
+      "grades": [
+        2,
+        0,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R011",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "Why does adding a resistor in parallel lower the equivalent resistance?",
+      "retrieved": [
+        "electronics/16_resistors_parallel.md",
+        "electronics/15_resistors_series.md",
+        "electronics/02_voltage_current.md"
+      ],
+      "grades": [
+        2,
+        0,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R012",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "Why is copper used for wires while plastic covers the wire?",
+      "retrieved": [
+        "electronics/17_conductor_insulator.md",
+        "electronics/01_closed_circuits.md",
+        "electronics/05_conductors.md"
+      ],
+      "grades": [
+        2,
+        0,
+        2
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.6666666666666666
+    },
+    {
+      "id": "R013",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "Is a short circuit the same thing as an open circuit?",
+      "retrieved": [
+        "electronics/18_open_vs_short.md",
+        "electronics/04_short_circuits.md",
+        "electronics/14_switch_positions.md"
+      ],
+      "grades": [
+        2,
+        2,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.6666666666666666
+    },
+    {
+      "id": "R014",
+      "subject": "computer_science",
+      "category": "direct",
+      "query": "Why can two threads incrementing the same counter lose an update?",
+      "retrieved": [
+        "computer_science/01_threads_mutex.md",
+        "computer_science/06_process_vs_thread.md",
+        "computer_science/05_deadlock.md"
+      ],
+      "grades": [
+        2,
+        1,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R015",
+      "subject": "computer_science",
+      "category": "direct",
+      "query": "How can two threads become stuck while waiting for each other’s locks?",
+      "retrieved": [
+        "computer_science/05_deadlock.md",
+        "computer_science/01_threads_mutex.md",
+        "computer_science/06_process_vs_thread.md"
+      ],
+      "grades": [
+        2,
+        1,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R016",
+      "subject": "computer_science",
+      "category": "direct",
+      "query": "Do threads in the same process share memory?",
+      "retrieved": [
+        "computer_science/06_process_vs_thread.md",
+        "computer_science/01_threads_mutex.md",
+        "computer_science/07_stack_heap.md"
+      ],
+      "grades": [
+        2,
+        2,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.6666666666666666
+    },
+    {
+      "id": "R017",
+      "subject": "computer_science",
+      "category": "direct",
+      "query": "Why does recursion consume stack space?",
+      "retrieved": [
+        "computer_science/02_recursion.md",
+        "computer_science/06_process_vs_thread.md",
+        "computer_science/07_stack_heap.md"
+      ],
+      "grades": [
+        1,
+        0,
+        2
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 0.3333333333333333,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R018",
+      "subject": "computer_science",
+      "category": "direct",
+      "query": "What happens when two different keys hash to the same bucket?",
+      "retrieved": [
+        "computer_science/08_hash_table_collisions.md",
+        "computer_science/03_data_structures.md",
+        "computer_science/01_threads_mutex.md"
+      ],
+      "grades": [
+        2,
+        1,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R019",
+      "subject": "computer_science",
+      "category": "direct",
+      "query": "Why can binary search fail on an unsorted list?",
+      "retrieved": [
+        "computer_science/09_binary_search.md",
+        "computer_science/03_data_structures.md",
+        "computer_science/10_bfs_dfs.md"
+      ],
+      "grades": [
+        2,
+        2,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.6666666666666666
+    },
+    {
+      "id": "R020",
+      "subject": "computer_science",
+      "category": "direct",
+      "query": "Which graph traversal finds the fewest-edge path in an unweighted graph?",
+      "retrieved": [
+        "computer_science/10_bfs_dfs.md",
+        "computer_science/03_data_structures.md",
+        "computer_science/09_binary_search.md"
+      ],
+      "grades": [
+        2,
+        0,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R021",
+      "subject": "computer_science",
+      "category": "direct",
+      "query": "A model gets 99 percent training accuracy but poor test accuracy. What is likely happening?",
+      "retrieved": [
+        "computer_science/11_overfitting.md",
+        "computer_science/12_data_leakage.md",
+        "computer_science/14_rag_grounding.md"
+      ],
+      "grades": [
+        2,
+        1,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R022",
+      "subject": "computer_science",
+      "category": "direct",
+      "query": "Why must test answer labels never be indexed into the retrieval knowledge base?",
+      "retrieved": [
+        "computer_science/12_data_leakage.md",
+        "computer_science/14_rag_grounding.md",
+        "computer_science/13_embeddings.md"
+      ],
+      "grades": [
+        2,
+        1,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R023",
+      "subject": "computer_science",
+      "category": "direct",
+      "query": "How can semantic search find passages without matching exact keywords?",
+      "retrieved": [
+        "computer_science/13_embeddings.md",
+        "computer_science/10_bfs_dfs.md",
+        "computer_science/09_binary_search.md"
+      ],
+      "grades": [
+        2,
+        0,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R024",
+      "subject": "computer_science",
+      "category": "direct",
+      "query": "How does RAG differ from asking an LLM without retrieved documents?",
+      "retrieved": [
+        "computer_science/12_data_leakage.md",
+        "computer_science/04_race_condition.md",
+        "computer_science/14_rag_grounding.md"
+      ],
+      "grades": [
+        0,
+        0,
+        2
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 0.3333333333333333,
+      "support_reciprocal_rank": 0.3333333333333333,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R025",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "Why does a bulb go dark when its only circuit path is broken?",
+      "retrieved": [
+        "electronics/01_closed_circuits.md",
+        "electronics/03_series_parallel.md",
+        "electronics/05_conductors.md"
+      ],
+      "grades": [
+        2,
+        2,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.6666666666666666
+    },
+    {
+      "id": "R026",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "What is the difference between electric current and voltage?",
+      "retrieved": [
+        "electronics/02_voltage_current.md",
+        "electronics/13_ground_reference.md",
+        "electronics/07_battery_energy.md"
+      ],
+      "grades": [
+        2,
+        1,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R027",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "How does failure of one bulb affect lights in series compared with parallel?",
+      "retrieved": [
+        "electronics/03_series_parallel.md",
+        "electronics/01_closed_circuits.md",
+        "electronics/05_conductors.md"
+      ],
+      "grades": [
+        2,
+        1,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R028",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "Why can a wire bypassing a bulb make a short circuit?",
+      "retrieved": [
+        "electronics/01_closed_circuits.md",
+        "electronics/04_short_circuits.md",
+        "electronics/18_open_vs_short.md"
+      ],
+      "grades": [
+        0,
+        2,
+        2
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 0.5,
+      "support_reciprocal_rank": 0.5,
+      "fully_relevant_precision_at_3": 0.6666666666666666
+    },
+    {
+      "id": "R029",
+      "subject": "electronics",
+      "category": "direct",
+      "query": "What role does insulation play around a metal conducting wire?",
+      "retrieved": [
+        "electronics/01_closed_circuits.md",
+        "electronics/14_switch_positions.md",
+        "electronics/05_conductors.md"
+      ],
+      "grades": [
+        0,
+        0,
+        2
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 0.3333333333333333,
+      "support_reciprocal_rank": 0.3333333333333333,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R030",
+      "subject": "computer_science",
+      "category": "direct",
+      "query": "Why do programs use a mutex for a shared critical section?",
+      "retrieved": [
+        "computer_science/01_threads_mutex.md",
+        "computer_science/04_race_condition.md",
+        "computer_science/05_deadlock.md"
+      ],
+      "grades": [
+        2,
+        2,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.6666666666666666
+    },
+    {
+      "id": "R031",
+      "subject": "computer_science",
+      "category": "direct",
+      "query": "What must a recursive function have to terminate?",
+      "retrieved": [
+        "computer_science/02_recursion.md",
+        "computer_science/07_stack_heap.md",
+        "computer_science/09_binary_search.md"
+      ],
+      "grades": [
+        2,
+        1,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R032",
+      "subject": "computer_science",
+      "category": "direct",
+      "query": "Why choose a queue rather than a stack for FIFO processing?",
+      "retrieved": [
+        "computer_science/03_data_structures.md",
+        "computer_science/07_stack_heap.md",
+        "computer_science/10_bfs_dfs.md"
+      ],
+      "grades": [
+        2,
+        0,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R033",
+      "subject": "electronics",
+      "category": "paraphrase",
+      "query": "Why does a higher resistance reduce electric current at constant voltage?",
+      "retrieved": [
+        "electronics/02_voltage_current.md",
+        "electronics/06_resistance_ohms_law.md",
+        "electronics/15_resistors_series.md"
+      ],
+      "grades": [
+        2,
+        2,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.6666666666666666
+    },
+    {
+      "id": "R034",
+      "subject": "electronics",
+      "category": "paraphrase",
+      "query": "Why can the current in two parallel branches be different?",
+      "retrieved": [
+        "electronics/03_series_parallel.md",
+        "electronics/09_voltage_parallel.md",
+        "electronics/08_current_conservation.md"
+      ],
+      "grades": [
+        1,
+        2,
+        2
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 0.5,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.6666666666666666
+    },
+    {
+      "id": "R035",
+      "subject": "electronics",
+      "category": "paraphrase",
+      "query": "Why can some bulbs remain lit when one branch is opened?",
+      "retrieved": [
+        "electronics/03_series_parallel.md",
+        "electronics/01_closed_circuits.md",
+        "electronics/05_conductors.md"
+      ],
+      "grades": [
+        2,
+        1,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R036",
+      "subject": "electronics",
+      "category": "paraphrase",
+      "query": "Why can a short circuit be dangerous even though an open circuit stops current?",
+      "retrieved": [
+        "electronics/18_open_vs_short.md",
+        "electronics/04_short_circuits.md",
+        "electronics/03_series_parallel.md"
+      ],
+      "grades": [
+        2,
+        2,
+        1
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.6666666666666666
+    },
+    {
+      "id": "R037",
+      "subject": "computer_science",
+      "category": "paraphrase",
+      "query": "Does using two threads always guarantee the correct final count?",
+      "retrieved": [
+        "computer_science/01_threads_mutex.md",
+        "computer_science/06_process_vs_thread.md",
+        "computer_science/05_deadlock.md"
+      ],
+      "grades": [
+        2,
+        1,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 1.0,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R038",
+      "subject": "computer_science",
+      "category": "paraphrase",
+      "query": "What is the difference between a process and a thread?",
+      "retrieved": [
+        "computer_science/01_threads_mutex.md",
+        "computer_science/06_process_vs_thread.md",
+        "computer_science/04_race_condition.md"
+      ],
+      "grades": [
+        1,
+        2,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 0.5,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R039",
+      "subject": "computer_science",
+      "category": "paraphrase",
+      "query": "Why do we evaluate a classifier on held-out data?",
+      "retrieved": [
+        "computer_science/12_data_leakage.md",
+        "computer_science/11_overfitting.md",
+        "computer_science/03_data_structures.md"
+      ],
+      "grades": [
+        1,
+        2,
+        0
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 0.5,
+      "support_reciprocal_rank": 1.0,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    },
+    {
+      "id": "R040",
+      "subject": "computer_science",
+      "category": "paraphrase",
+      "query": "Can RAG still hallucinate despite showing citations?",
+      "retrieved": [
+        "computer_science/12_data_leakage.md",
+        "computer_science/13_embeddings.md",
+        "computer_science/14_rag_grounding.md"
+      ],
+      "grades": [
+        0,
+        1,
+        2
+      ],
+      "full_hit_at_3": 1,
+      "support_hit_at_3": 1,
+      "full_reciprocal_rank": 0.3333333333333333,
+      "support_reciprocal_rank": 0.5,
+      "fully_relevant_precision_at_3": 0.3333333333333333
+    }
+  ],
+  "limitations": [
+    "Audited current top-3 plus previous gold source, not all possible relevant notes.",
+    "Hit@3 and MRR@3 are measured on this judged set; this is not exhaustive Recall@3.",
+    "Questions and notes are project-authored and constitute development data, not an independent blind test.",
+    "Do not interpret millisecond search latency as full answer generation latency."
+  ]
+}
