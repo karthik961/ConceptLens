@@ -4,255 +4,287 @@
     "concept": "closed circuits",
     "origin": "project_authored_demo",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "demo"
+    "source_url": "https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/resistance/",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/02_voltage_current.md": {
     "topic": "voltage",
     "concept": "voltage current",
     "origin": "project_authored_demo",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "demo"
+    "source_url": "https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/voltage-current/",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/03_series_parallel.md": {
     "topic": "series_parallel",
     "concept": "series parallel",
     "origin": "project_authored_demo",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "demo"
+    "source_url": "https://openstax.org/books/college-physics-2e/pages/21-1-resistors-in-series-and-parallel",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/04_short_circuits.md": {
     "topic": "faults",
     "concept": "short circuits",
     "origin": "project_authored_demo",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "demo"
+    "source_url": "https://openstax.org/books/college-physics-2e/pages/20-6-electric-hazards-and-the-human-body",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/05_conductors.md": {
     "topic": "materials",
     "concept": "conductors",
     "origin": "project_authored_demo",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "demo"
+    "source_url": "https://openstax.org/books/college-physics-2e/pages/20-3-resistance-and-resistivity",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "computer_science/01_threads_mutex.md": {
     "topic": "concurrency",
     "concept": "threads mutex",
     "origin": "project_authored_demo",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "demo"
+    "source_url": "https://ocw.mit.edu/ans7870/6/6.005/s16/classes/23-locks/",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "computer_science/02_recursion.md": {
     "topic": "algorithms",
     "concept": "recursion",
     "origin": "project_authored_demo",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "demo"
+    "source_url": "https://ocw.mit.edu/ans7870/6/6.005/s16/classes/10-recursion/",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "computer_science/03_data_structures.md": {
     "topic": "data_structures",
     "concept": "data structures",
     "origin": "project_authored_demo",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "demo"
+    "source_url": "https://docs.python.org/3/tutorial/datastructures.html",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/06_resistance_ohms_law.md": {
     "topic": "resistance",
     "concept": "Resistance and Ohm’s law",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://openstax.org/books/college-physics-2e/pages/20-2-ohms-law-resistance-and-simple-circuits",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/07_battery_energy.md": {
     "topic": "battery",
     "concept": "Battery voltage, stored energy, and discharge",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/voltage-current/",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/08_current_conservation.md": {
     "topic": "current",
     "concept": "Current conservation at junctions",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://openstax.org/books/university-physics-volume-2/pages/10-3-kirchhoffs-rules",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/09_voltage_parallel.md": {
     "topic": "parallel",
     "concept": "Voltage across parallel branches",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://openstax.org/books/college-physics-2e/pages/21-1-resistors-in-series-and-parallel",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/10_series_current.md": {
     "topic": "series",
     "concept": "Current in a series circuit",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://openstax.org/books/college-physics-2e/pages/21-1-resistors-in-series-and-parallel",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/11_power_energy.md": {
     "topic": "power",
     "concept": "Electrical power and energy",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://openstax.org/books/college-physics-2e/pages/20-4-electric-power-and-energy",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/12_meters.md": {
     "topic": "measurement",
     "concept": "Ammeter and voltmeter connections",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://openstax.org/books/university-physics-volume-2/pages/10-4-electrical-measuring-instruments",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/13_ground_reference.md": {
     "topic": "ground",
     "concept": "Ground and voltage reference",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://www.allaboutcircuits.com/technical-articles/an-introduction-to-ground/",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/14_switch_positions.md": {
     "topic": "switch",
     "concept": "Switches and conducting paths",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/resistance/",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/15_resistors_series.md": {
     "topic": "resistance",
     "concept": "Equivalent resistance in series",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://openstax.org/books/college-physics-2e/pages/21-1-resistors-in-series-and-parallel",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/16_resistors_parallel.md": {
     "topic": "resistance",
     "concept": "Equivalent resistance in parallel",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://openstax.org/books/college-physics-2e/pages/21-1-resistors-in-series-and-parallel",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/17_conductor_insulator.md": {
     "topic": "materials",
     "concept": "Conductors and insulators",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://openstax.org/books/college-physics-2e/pages/20-3-resistance-and-resistivity",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "electronics/18_open_vs_short.md": {
     "topic": "faults",
     "concept": "Open faults versus short faults",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/resistance/",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "computer_science/04_race_condition.md": {
     "topic": "concurrency",
     "concept": "Race conditions in shared data",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://ocw.mit.edu/ans7870/6/6.005/s16/classes/23-locks/",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "computer_science/05_deadlock.md": {
     "topic": "concurrency",
     "concept": "Deadlock and lock ordering",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://ocw.mit.edu/ans7870/6/6.005/s16/classes/23-locks/",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "computer_science/06_process_vs_thread.md": {
     "topic": "operating_systems",
     "concept": "Processes versus threads",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://docs.python.org/3/library/threading.html",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "computer_science/07_stack_heap.md": {
     "topic": "memory",
     "concept": "Stack and heap memory",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://www.cs.cornell.edu/courses/cs3410/2025sp/notes/mem.html",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "computer_science/08_hash_table_collisions.md": {
     "topic": "data_structures",
     "concept": "Hash tables and collisions",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://docs.python.org/3/glossary.html",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "computer_science/09_binary_search.md": {
     "topic": "algorithms",
     "concept": "Binary search preconditions",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://docs.python.org/3/library/bisect.html",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "computer_science/10_bfs_dfs.md": {
     "topic": "graphs",
     "concept": "Breadth-first versus depth-first search",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://cp-algorithms.com/graph/breadth-first-search.html",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "computer_science/11_overfitting.md": {
     "topic": "machine_learning",
     "concept": "Overfitting and generalization",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://developers.google.com/machine-learning/crash-course/overfitting/overfitting",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "computer_science/12_data_leakage.md": {
     "topic": "machine_learning",
     "concept": "Data leakage in evaluation",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://scikit-learn.org/stable/common_pitfalls.html",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "computer_science/13_embeddings.md": {
     "topic": "nlp",
     "concept": "Sentence embeddings and semantic search",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   },
   "computer_science/14_rag_grounding.md": {
     "topic": "nlp",
     "concept": "Retrieval-augmented generation and grounding",
     "origin": "project_authored_phase2",
     "license": "original_project_content",
-    "source_url": "",
-    "review_status": "needs_subject_expert_review"
+    "source_url": "https://arxiv.org/abs/2005.11401",
+    "review_status": "reference_linked_pending_human_content_review",
+    "reference_role": "supporting_reference_not_text_origin"
   }
 }
