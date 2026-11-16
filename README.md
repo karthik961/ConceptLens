@@ -121,3 +121,12 @@ ConceptLens_Starter/
 - LangChain ChatOllama: https://docs.langchain.com/oss/python/integrations/chat/ollama
 - LangChain local Hugging Face embeddings: https://docs.langchain.com/oss/python/integrations/embeddings/huggingfacehub
 - Ollama Qwen2.5: https://ollama.com/library/qwen2.5
+
+
+## Phase 2 retrieval evaluation (completed)
+
+Read [PHASE2_RESULTS.md](PHASE2_RESULTS.md) for the frozen development and held-out comparisons, reproducibility commands, known failures, source-review limitations, and how the default retriever was selected. On 20 held-out questions, both semantic-only and hybrid retrieval achieved **85.0% Hit@3**; semantic-only had slightly higher MRR@3 (0.817 versus 0.800), so semantic-only remains the default. These are document-retrieval metrics, not grading accuracy.
+
+The 32 project-authored knowledge notes have supporting-reading URLs in [knowledge/catalog.json](knowledge/catalog.json). The notes have **not** yet undergone independent subject-expert verification; this metadata update does not change the tested text corpus. Prior results and associated code are frozen at commit `cb9a846c4d41b5f80c303391db63b85c8870dbc4`.
+
+For the full project, Phase 3 concerns feedback correctness and misconception assessment; the retrieval evaluation cannot establish either on its own.
