@@ -1,0 +1,22 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local models, databases and datasets
+.chromadb/
+data/beetle/
+data/uploads/
+
+# Secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# System files
+.DS_Store
+*.log
+
+# Extracted experiment folder (after merging code)
+ConceptLens_Phase2_Hybrid_Experiment/

@@ -1,0 +1,258 @@
+{
+  "electronics/01_closed_circuits.md": {
+    "topic": "circuits",
+    "concept": "closed circuits",
+    "origin": "project_authored_demo",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "demo"
+  },
+  "electronics/02_voltage_current.md": {
+    "topic": "voltage",
+    "concept": "voltage current",
+    "origin": "project_authored_demo",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "demo"
+  },
+  "electronics/03_series_parallel.md": {
+    "topic": "series_parallel",
+    "concept": "series parallel",
+    "origin": "project_authored_demo",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "demo"
+  },
+  "electronics/04_short_circuits.md": {
+    "topic": "faults",
+    "concept": "short circuits",
+    "origin": "project_authored_demo",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "demo"
+  },
+  "electronics/05_conductors.md": {
+    "topic": "materials",
+    "concept": "conductors",
+    "origin": "project_authored_demo",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "demo"
+  },
+  "computer_science/01_threads_mutex.md": {
+    "topic": "concurrency",
+    "concept": "threads mutex",
+    "origin": "project_authored_demo",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "demo"
+  },
+  "computer_science/02_recursion.md": {
+    "topic": "algorithms",
+    "concept": "recursion",
+    "origin": "project_authored_demo",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "demo"
+  },
+  "computer_science/03_data_structures.md": {
+    "topic": "data_structures",
+    "concept": "data structures",
+    "origin": "project_authored_demo",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "demo"
+  },
+  "electronics/06_resistance_ohms_law.md": {
+    "topic": "resistance",
+    "concept": "Resistance and Ohm’s law",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "electronics/07_battery_energy.md": {
+    "topic": "battery",
+    "concept": "Battery voltage, stored energy, and discharge",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "electronics/08_current_conservation.md": {
+    "topic": "current",
+    "concept": "Current conservation at junctions",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "electronics/09_voltage_parallel.md": {
+    "topic": "parallel",
+    "concept": "Voltage across parallel branches",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "electronics/10_series_current.md": {
+    "topic": "series",
+    "concept": "Current in a series circuit",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "electronics/11_power_energy.md": {
+    "topic": "power",
+    "concept": "Electrical power and energy",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "electronics/12_meters.md": {
+    "topic": "measurement",
+    "concept": "Ammeter and voltmeter connections",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "electronics/13_ground_reference.md": {
+    "topic": "ground",
+    "concept": "Ground and voltage reference",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "electronics/14_switch_positions.md": {
+    "topic": "switch",
+    "concept": "Switches and conducting paths",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "electronics/15_resistors_series.md": {
+    "topic": "resistance",
+    "concept": "Equivalent resistance in series",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "electronics/16_resistors_parallel.md": {
+    "topic": "resistance",
+    "concept": "Equivalent resistance in parallel",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "electronics/17_conductor_insulator.md": {
+    "topic": "materials",
+    "concept": "Conductors and insulators",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "electronics/18_open_vs_short.md": {
+    "topic": "faults",
+    "concept": "Open faults versus short faults",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "computer_science/04_race_condition.md": {
+    "topic": "concurrency",
+    "concept": "Race conditions in shared data",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "computer_science/05_deadlock.md": {
+    "topic": "concurrency",
+    "concept": "Deadlock and lock ordering",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "computer_science/06_process_vs_thread.md": {
+    "topic": "operating_systems",
+    "concept": "Processes versus threads",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "computer_science/07_stack_heap.md": {
+    "topic": "memory",
+    "concept": "Stack and heap memory",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "computer_science/08_hash_table_collisions.md": {
+    "topic": "data_structures",
+    "concept": "Hash tables and collisions",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "computer_science/09_binary_search.md": {
+    "topic": "algorithms",
+    "concept": "Binary search preconditions",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "computer_science/10_bfs_dfs.md": {
+    "topic": "graphs",
+    "concept": "Breadth-first versus depth-first search",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "computer_science/11_overfitting.md": {
+    "topic": "machine_learning",
+    "concept": "Overfitting and generalization",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "computer_science/12_data_leakage.md": {
+    "topic": "machine_learning",
+    "concept": "Data leakage in evaluation",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "computer_science/13_embeddings.md": {
+    "topic": "nlp",
+    "concept": "Sentence embeddings and semantic search",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  },
+  "computer_science/14_rag_grounding.md": {
+    "topic": "nlp",
+    "concept": "Retrieval-augmented generation and grounding",
+    "origin": "project_authored_phase2",
+    "license": "original_project_content",
+    "source_url": "",
+    "review_status": "needs_subject_expert_review"
+  }
+}

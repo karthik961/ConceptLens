@@ -1,0 +1,937 @@
+﻿case_id,subject,category,query,source,rank,originally_gold,relevance,rationale,passage
+R001,electronics,direct,"If the voltage across a fixed resistor stays the same but resistance doubles, what happens to current?",electronics/15_resistors_series.md,1,no,1,"Explains that added series resistance lowers current at fixed voltage, but does not state the current halves when resistance doubles.","# Equivalent resistance in series
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+For ideal resistors in series, equivalent resistance is the sum of their resistances. Adding series resistance to a fixed-voltage circuit generally reduces total current. This does not mean that current is progressively consumed as it passes each resistor.
+"
+R001,electronics,direct,"If the voltage across a fixed resistor stays the same but resistance doubles, what happens to current?",electronics/06_resistance_ohms_law.md,2,yes,2,States V = I × R and that greater resistance gives lower current at fixed voltage; doubling R halves I.,"# Resistance and Ohm’s law
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Resistance describes how strongly a component opposes current. For an ohmic component under fixed conditions, voltage, current, and resistance satisfy V = I × R. At the same voltage, greater resistance means less current. This relation does not say that every component has a fixed resistance: a filament lamp changes resistance as it heats.
+"
+R001,electronics,direct,"If the voltage across a fixed resistor stays the same but resistance doubles, what happens to current?",electronics/16_resistors_parallel.md,3,no,0,"Discusses equivalent resistance of parallel branches, not doubling one resistor under fixed voltage.","# Equivalent resistance in parallel
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+For ideal resistors in parallel, reciprocal equivalent resistance equals the sum of reciprocal branch resistances. Adding another parallel branch reduces equivalent resistance across the same nodes and can increase total current drawn from a fixed-voltage source. Each existing ideal branch still has the same applied voltage.
+"
+R002,electronics,direct,Does a switch opening mean the battery is empty?,electronics/01_closed_circuits.md,1,no,2,Explicitly says opening a switch breaks the path without implying the battery has exhausted its stored energy.,"# Closed paths, open circuits, and bulbs
+
+**Concept notes written for the ConceptLens starter demo; not a reference to any BEETLE answer or label.**
+
+A simple battery–wire–bulb circuit lights the bulb when a complete conducting path connects the two battery terminals through the bulb. Current can flow around this closed loop, and the bulb converts electrical energy into light and heat.
+
+Opening a switch creates a gap in a path and interrupts current in that path. The bulb goes out because the conducting loop is broken; the fact that it is dark does not, by itself, mean the battery's stored chemical energy has been exhausted.
+
+A switch does not normally consume all the charge in the battery. It changes whether the current path is complete. A battery can still maintain a potential difference across its terminals while the circuit is open, although no steady current flows through an ideal open switch.
+"
+R002,electronics,direct,Does a switch opening mean the battery is empty?,electronics/07_battery_energy.md,2,yes,2,Explicitly states that opening a switch does not instantly discharge a working battery.,"# Battery voltage, stored energy, and discharge
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A battery converts stored chemical energy into electrical energy delivered to a circuit. Its voltage indicates potential difference, not the number of electrons stored or a fixed amount of current. A discharged battery may not sustain the intended current under load. Opening a switch does not instantly discharge a working battery.
+"
+R002,electronics,direct,Does a switch opening mean the battery is empty?,electronics/14_switch_positions.md,3,no,1,"Describes an open switch as a gap rather than a conducting path, but does not directly address battery charge.","# Switches and conducting paths
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An ideal closed switch behaves like a conducting connection; an ideal open switch behaves like a gap. Whether a particular lamp lights depends on which current path the switch controls. In a branched circuit, opening one branch need not disconnect other complete branches.
+"
+R003,electronics,direct,How does current divide at a junction in a parallel circuit?,electronics/08_current_conservation.md,1,yes,2,"Explains charge conservation at a junction: incoming current equals outgoing branch currents, which need not be equal.","# Current conservation at junctions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Charge does not disappear at a circuit junction. In steady state, total current entering a junction equals total current leaving it. In parallel branches current divides according to electrical properties; current is not necessarily split equally. This rule concerns current, not equal voltage everywhere.
+"
+R003,electronics,direct,How does current divide at a junction in a parallel circuit?,electronics/09_voltage_parallel.md,2,no,1,"Explains equal parallel-branch voltages and potentially different branch currents, but not the junction conservation law.","# Voltage across parallel branches
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Components connected between the same two circuit nodes have the same voltage across them. In a simple parallel circuit, each complete branch sees the source terminal voltage, aside from nonideal effects. Identical voltage does not imply identical current, because branch resistances may differ.
+"
+R003,electronics,direct,How does current divide at a junction in a parallel circuit?,electronics/03_series_parallel.md,3,no,1,"Describes separate parallel current paths, but does not state how the incoming current divides at a junction.","# Series and parallel circuits
+
+**Concept notes written for the ConceptLens starter demo.**
+
+In a single-loop series circuit, all components lie on one path. The same current flows through each component in that loop under steady-state conditions. If one component breaks the loop, current stops throughout the loop.
+
+In parallel circuits, branches provide separate conductive paths between common connection points. Opening one branch can stop current there while other complete branches continue to carry current. The same voltage appears across ideal parallel branches sharing the same pair of nodes.
+
+Do not conclude that every bulb must go out when any bulb fails: the effect depends on whether the circuit is series or parallel, and where the break occurs. Understanding which paths remain closed is more reliable than memorizing a slogan.
+"
+R004,electronics,direct,Do two resistors in parallel always have the same current?,electronics/16_resistors_parallel.md,1,no,1,"Explains equal applied voltage across parallel branches and equivalent resistance, but not why individual branch currents can differ.","# Equivalent resistance in parallel
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+For ideal resistors in parallel, reciprocal equivalent resistance equals the sum of reciprocal branch resistances. Adding another parallel branch reduces equivalent resistance across the same nodes and can increase total current drawn from a fixed-voltage source. Each existing ideal branch still has the same applied voltage.
+"
+R004,electronics,direct,Do two resistors in parallel always have the same current?,electronics/15_resistors_series.md,2,no,0,"Covers series equivalent resistance, not the current through parallel resistors.","# Equivalent resistance in series
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+For ideal resistors in series, equivalent resistance is the sum of their resistances. Adding series resistance to a fixed-voltage circuit generally reduces total current. This does not mean that current is progressively consumed as it passes each resistor.
+"
+R004,electronics,direct,Do two resistors in parallel always have the same current?,electronics/09_voltage_parallel.md,3,yes,2,Explicitly states that identical voltage across parallel branches need not mean identical current because resistances differ.,"# Voltage across parallel branches
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Components connected between the same two circuit nodes have the same voltage across them. In a simple parallel circuit, each complete branch sees the source terminal voltage, aside from nonideal effects. Identical voltage does not imply identical current, because branch resistances may differ.
+"
+R005,electronics,direct,Why does one broken bulb turn off other bulbs in a series string?,electronics/03_series_parallel.md,1,no,2,States that breaking a component in a single series loop stops current through the entire loop.,"# Series and parallel circuits
+
+**Concept notes written for the ConceptLens starter demo.**
+
+In a single-loop series circuit, all components lie on one path. The same current flows through each component in that loop under steady-state conditions. If one component breaks the loop, current stops throughout the loop.
+
+In parallel circuits, branches provide separate conductive paths between common connection points. Opening one branch can stop current there while other complete branches continue to carry current. The same voltage appears across ideal parallel branches sharing the same pair of nodes.
+
+Do not conclude that every bulb must go out when any bulb fails: the effect depends on whether the circuit is series or parallel, and where the break occurs. Understanding which paths remain closed is more reliable than memorizing a slogan.
+"
+R005,electronics,direct,Why does one broken bulb turn off other bulbs in a series string?,electronics/01_closed_circuits.md,2,no,1,"Explains that a broken loop interrupts current, but does not explicitly connect failure of one bulb to other series bulbs.","# Closed paths, open circuits, and bulbs
+
+**Concept notes written for the ConceptLens starter demo; not a reference to any BEETLE answer or label.**
+
+A simple battery–wire–bulb circuit lights the bulb when a complete conducting path connects the two battery terminals through the bulb. Current can flow around this closed loop, and the bulb converts electrical energy into light and heat.
+
+Opening a switch creates a gap in a path and interrupts current in that path. The bulb goes out because the conducting loop is broken; the fact that it is dark does not, by itself, mean the battery's stored chemical energy has been exhausted.
+
+A switch does not normally consume all the charge in the battery. It changes whether the current path is complete. A battery can still maintain a potential difference across its terminals while the circuit is open, although no steady current flows through an ideal open switch.
+"
+R005,electronics,direct,Why does one broken bulb turn off other bulbs in a series string?,electronics/05_conductors.md,3,no,1,"Says a bulb needs a complete path, but does not explain why the same break affects the other bulbs in series.","# Conductors, insulators and charge
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Metals generally conduct because some electrons can move through the material. Insulators resist charge motion under ordinary conditions. Whether a bulb lights depends on both the material in the loop and whether the path is complete.
+
+Electrons are not created by a light bulb, and a lamp does not consume electrons as if they were fuel. Electrical energy supplied by the source is converted to heat and light in the lamp.
+
+An open air gap is usually insulating at ordinary low voltages, but extremely high voltages can cause dielectric breakdown. Basic circuit questions usually assume a simple ideal opening that prevents current.
+"
+R005,electronics,direct,Why does one broken bulb turn off other bulbs in a series string?,electronics/10_series_current.md,,yes,2,Explicitly states that a break anywhere in the only series path stops current through every series component.,"# Current in a series circuit
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A series path contains components along one unbranched conducting route. In steady operation, the same current flows through each component along that route. The source voltage is divided across components, with larger resistance typically taking a larger voltage drop for ohmic resistors. A break anywhere in the sole series path stops current through every series component.
+"
+R006,electronics,direct,What is the difference between electrical energy and electrical power?,electronics/11_power_energy.md,1,yes,2,"Defines power as energy transfer per unit time, gives P = VI and E = Pt, and distinguishes watts from joules.","# Electrical power and energy
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Electrical power is the rate at which electrical energy is transferred: P = V × I for a device using the passive sign convention. Energy transferred over a constant interval is E = P × t. Power is measured in watts, energy in joules. A bright lamp can consume more power without implying that electrons are being destroyed.
+"
+R006,electronics,direct,What is the difference between electrical energy and electrical power?,electronics/02_voltage_current.md,2,no,1,Explains that electrical energy is transferred but does not define power as a rate.,"# Voltage, current, battery and resistance
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Voltage is electric potential difference between two points, measured in volts. A battery uses chemical reactions to maintain an electrical potential difference between its terminals.
+
+Electric current is the rate of flow of electric charge, measured in amperes. Current through a component requires a conducting path and a driving potential difference. Charge is not normally used up at a component; energy is transferred.
+
+Resistance describes how strongly a component opposes current under specified conditions. For an ohmic resistor, the relationship between voltage V, current I, and resistance R is V = I R.
+
+A voltage reading between two points is not the same thing as the current flowing through a device. A voltmeter connects across the two points; an ammeter is commonly inserted in series with the branch of interest.
+"
+R006,electronics,direct,What is the difference between electrical energy and electrical power?,electronics/05_conductors.md,3,no,0,Describes conductors and energy conversion in a lamp without distinguishing power from energy.,"# Conductors, insulators and charge
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Metals generally conduct because some electrons can move through the material. Insulators resist charge motion under ordinary conditions. Whether a bulb lights depends on both the material in the loop and whether the path is complete.
+
+Electrons are not created by a light bulb, and a lamp does not consume electrons as if they were fuel. Electrical energy supplied by the source is converted to heat and light in the lamp.
+
+An open air gap is usually insulating at ordinary low voltages, but extremely high voltages can cause dielectric breakdown. Basic circuit questions usually assume a simple ideal opening that prevents current.
+"
+R007,electronics,direct,Should a voltmeter be connected in series or in parallel?,electronics/12_meters.md,1,yes,2,Explicitly states that a voltmeter connects in parallel across the component being measured.,"# Ammeter and voltmeter connections
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An ammeter measures current through a branch and is normally connected in series with that branch; an ideal ammeter has negligible resistance. A voltmeter measures potential difference between two points and is connected in parallel across the component; an ideal voltmeter has very high resistance. Incorrect meter connections can disturb the circuit.
+"
+R007,electronics,direct,Should a voltmeter be connected in series or in parallel?,electronics/03_series_parallel.md,2,no,0,"Explains series and parallel circuit behavior, not how to connect a voltmeter.","# Series and parallel circuits
+
+**Concept notes written for the ConceptLens starter demo.**
+
+In a single-loop series circuit, all components lie on one path. The same current flows through each component in that loop under steady-state conditions. If one component breaks the loop, current stops throughout the loop.
+
+In parallel circuits, branches provide separate conductive paths between common connection points. Opening one branch can stop current there while other complete branches continue to carry current. The same voltage appears across ideal parallel branches sharing the same pair of nodes.
+
+Do not conclude that every bulb must go out when any bulb fails: the effect depends on whether the circuit is series or parallel, and where the break occurs. Understanding which paths remain closed is more reliable than memorizing a slogan.
+"
+R007,electronics,direct,Should a voltmeter be connected in series or in parallel?,electronics/10_series_current.md,3,no,0,"Covers current through a series path, not voltmeter connections.","# Current in a series circuit
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A series path contains components along one unbranched conducting route. In steady operation, the same current flows through each component along that route. The source voltage is divided across components, with larger resistance typically taking a larger voltage drop for ohmic resistors. A break anywhere in the sole series path stops current through every series component.
+"
+R008,electronics,direct,Does a ground symbol always mean current will flow to the Earth?,electronics/13_ground_reference.md,1,yes,2,Distinguishes a ground reference node from protective earth and says a ground symbol does not guarantee current flow.,"# Ground and voltage reference
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Voltage is a difference in electric potential between two points, never a stand-alone absolute quantity. A ground symbol may define the chosen zero-volt reference for analysis; it does not guarantee that current has an available return path. Protective earth grounding is a separate safety concept from the abstract circuit reference node.
+"
+R008,electronics,direct,Does a ground symbol always mean current will flow to the Earth?,electronics/12_meters.md,2,no,0,Describes ammeters and voltmeters without explaining ground or current flow to Earth.,"# Ammeter and voltmeter connections
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An ammeter measures current through a branch and is normally connected in series with that branch; an ideal ammeter has negligible resistance. A voltmeter measures potential difference between two points and is connected in parallel across the component; an ideal voltmeter has very high resistance. Incorrect meter connections can disturb the circuit.
+"
+R008,electronics,direct,Does a ground symbol always mean current will flow to the Earth?,electronics/02_voltage_current.md,3,no,1,Defines voltage as a difference between points but does not distinguish circuit ground from Earth.,"# Voltage, current, battery and resistance
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Voltage is electric potential difference between two points, measured in volts. A battery uses chemical reactions to maintain an electrical potential difference between its terminals.
+
+Electric current is the rate of flow of electric charge, measured in amperes. Current through a component requires a conducting path and a driving potential difference. Charge is not normally used up at a component; energy is transferred.
+
+Resistance describes how strongly a component opposes current under specified conditions. For an ohmic resistor, the relationship between voltage V, current I, and resistance R is V = I R.
+
+A voltage reading between two points is not the same thing as the current flowing through a device. A voltmeter connects across the two points; an ammeter is commonly inserted in series with the branch of interest.
+"
+R009,electronics,direct,"If a switch opens in one parallel branch, must all lights turn off?",electronics/14_switch_positions.md,1,yes,2,Explicitly says opening one branch in a branched circuit need not disconnect the other complete branches.,"# Switches and conducting paths
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An ideal closed switch behaves like a conducting connection; an ideal open switch behaves like a gap. Whether a particular lamp lights depends on which current path the switch controls. In a branched circuit, opening one branch need not disconnect other complete branches.
+"
+R009,electronics,direct,"If a switch opens in one parallel branch, must all lights turn off?",electronics/09_voltage_parallel.md,2,no,1,"Describes equal voltage across parallel branches, but does not discuss the consequence of opening a branch.","# Voltage across parallel branches
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Components connected between the same two circuit nodes have the same voltage across them. In a simple parallel circuit, each complete branch sees the source terminal voltage, aside from nonideal effects. Identical voltage does not imply identical current, because branch resistances may differ.
+"
+R009,electronics,direct,"If a switch opens in one parallel branch, must all lights turn off?",electronics/01_closed_circuits.md,3,no,1,"Says an open path interrupts current, but does not consider the other parallel paths.","# Closed paths, open circuits, and bulbs
+
+**Concept notes written for the ConceptLens starter demo; not a reference to any BEETLE answer or label.**
+
+A simple battery–wire–bulb circuit lights the bulb when a complete conducting path connects the two battery terminals through the bulb. Current can flow around this closed loop, and the bulb converts electrical energy into light and heat.
+
+Opening a switch creates a gap in a path and interrupts current in that path. The bulb goes out because the conducting loop is broken; the fact that it is dark does not, by itself, mean the battery's stored chemical energy has been exhausted.
+
+A switch does not normally consume all the charge in the battery. It changes whether the current path is complete. A battery can still maintain a potential difference across its terminals while the circuit is open, although no steady current flows through an ideal open switch.
+"
+R010,electronics,direct,What happens to equivalent resistance when another resistor is put in series?,electronics/15_resistors_series.md,1,yes,2,"States that ideal series resistances add, so adding another positive resistor increases equivalent resistance.","# Equivalent resistance in series
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+For ideal resistors in series, equivalent resistance is the sum of their resistances. Adding series resistance to a fixed-voltage circuit generally reduces total current. This does not mean that current is progressively consumed as it passes each resistor.
+"
+R010,electronics,direct,What happens to equivalent resistance when another resistor is put in series?,electronics/16_resistors_parallel.md,2,no,0,"Describes adding parallel branches, not adding a resistor in series.","# Equivalent resistance in parallel
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+For ideal resistors in parallel, reciprocal equivalent resistance equals the sum of reciprocal branch resistances. Adding another parallel branch reduces equivalent resistance across the same nodes and can increase total current drawn from a fixed-voltage source. Each existing ideal branch still has the same applied voltage.
+"
+R010,electronics,direct,What happens to equivalent resistance when another resistor is put in series?,electronics/02_voltage_current.md,3,no,0,"Defines voltage, current, and Ohm’s law but gives no formula for equivalent resistance in series.","# Voltage, current, battery and resistance
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Voltage is electric potential difference between two points, measured in volts. A battery uses chemical reactions to maintain an electrical potential difference between its terminals.
+
+Electric current is the rate of flow of electric charge, measured in amperes. Current through a component requires a conducting path and a driving potential difference. Charge is not normally used up at a component; energy is transferred.
+
+Resistance describes how strongly a component opposes current under specified conditions. For an ohmic resistor, the relationship between voltage V, current I, and resistance R is V = I R.
+
+A voltage reading between two points is not the same thing as the current flowing through a device. A voltmeter connects across the two points; an ammeter is commonly inserted in series with the branch of interest.
+"
+R011,electronics,direct,Why does adding a resistor in parallel lower the equivalent resistance?,electronics/16_resistors_parallel.md,1,yes,2,States the reciprocal-resistance rule and that adding a parallel branch lowers equivalent resistance.,"# Equivalent resistance in parallel
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+For ideal resistors in parallel, reciprocal equivalent resistance equals the sum of reciprocal branch resistances. Adding another parallel branch reduces equivalent resistance across the same nodes and can increase total current drawn from a fixed-voltage source. Each existing ideal branch still has the same applied voltage.
+"
+R011,electronics,direct,Why does adding a resistor in parallel lower the equivalent resistance?,electronics/15_resistors_series.md,2,no,0,"Explains addition of series resistances, not why adding parallel branches lowers equivalent resistance.","# Equivalent resistance in series
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+For ideal resistors in series, equivalent resistance is the sum of their resistances. Adding series resistance to a fixed-voltage circuit generally reduces total current. This does not mean that current is progressively consumed as it passes each resistor.
+"
+R011,electronics,direct,Why does adding a resistor in parallel lower the equivalent resistance?,electronics/02_voltage_current.md,3,no,0,"Gives Ohm’s law for a component, but no parallel equivalent-resistance relation.","# Voltage, current, battery and resistance
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Voltage is electric potential difference between two points, measured in volts. A battery uses chemical reactions to maintain an electrical potential difference between its terminals.
+
+Electric current is the rate of flow of electric charge, measured in amperes. Current through a component requires a conducting path and a driving potential difference. Charge is not normally used up at a component; energy is transferred.
+
+Resistance describes how strongly a component opposes current under specified conditions. For an ohmic resistor, the relationship between voltage V, current I, and resistance R is V = I R.
+
+A voltage reading between two points is not the same thing as the current flowing through a device. A voltmeter connects across the two points; an ammeter is commonly inserted in series with the branch of interest.
+"
+R012,electronics,direct,Why is copper used for wires while plastic covers the wire?,electronics/17_conductor_insulator.md,1,yes,2,"Contrasts easily conducting copper and strongly insulating plastic, explaining the different roles of wire and cover.","# Conductors and insulators
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+In ordinary circuit contexts, conductors such as copper permit charges to move comparatively easily, while insulators such as dry plastic strongly limit that motion. Their behavior depends on conditions and material properties. Insulators are not perfectly incapable of carrying charge under every possible voltage.
+"
+R012,electronics,direct,Why is copper used for wires while plastic covers the wire?,electronics/05_conductors.md,2,no,2,Explains that metals conduct due to mobile electrons while insulators resist charge movement.,"# Conductors, insulators and charge
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Metals generally conduct because some electrons can move through the material. Insulators resist charge motion under ordinary conditions. Whether a bulb lights depends on both the material in the loop and whether the path is complete.
+
+Electrons are not created by a light bulb, and a lamp does not consume electrons as if they were fuel. Electrical energy supplied by the source is converted to heat and light in the lamp.
+
+An open air gap is usually insulating at ordinary low voltages, but extremely high voltages can cause dielectric breakdown. Basic circuit questions usually assume a simple ideal opening that prevents current.
+"
+R012,electronics,direct,Why is copper used for wires while plastic covers the wire?,electronics/04_short_circuits.md,3,no,1,"Warns that unintended low-resistance paths are hazardous, giving safety context but not explaining copper versus plastic.","# Short circuits and safe reasoning
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A short circuit is an unintended very low-resistance path between points of different potential, or a path that bypasses a load. It can cause a large current limited by the actual resistance and internal resistance of the source.
+
+A short circuit is different from an open circuit. An open circuit interrupts a path so current cannot cross the gap. A short circuit may offer an easier unintended path and can cause overheating or damage. Never short a real battery to test a hypothesis.
+
+Circuit diagrams distinguish components, connection nodes, and switches. When reasoning about a circuit, trace the current path from one source terminal through components and back to the other terminal.
+"
+R013,electronics,direct,Is a short circuit the same thing as an open circuit?,electronics/18_open_vs_short.md,1,yes,2,Directly contrasts an open path that stops current with an unintended low-resistance short path.,"# Open faults versus short faults
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An open circuit breaks the intended conducting path, so current through that path stops. A short circuit provides a low-resistance unintended path, potentially causing excessive current and diverting current away from a load. These failures are not interchangeable: a short does not merely mean the circuit is switched off.
+"
+R013,electronics,direct,Is a short circuit the same thing as an open circuit?,electronics/04_short_circuits.md,2,no,2,"Explicitly explains that open and short circuits differ, including current interruption versus possible high current.","# Short circuits and safe reasoning
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A short circuit is an unintended very low-resistance path between points of different potential, or a path that bypasses a load. It can cause a large current limited by the actual resistance and internal resistance of the source.
+
+A short circuit is different from an open circuit. An open circuit interrupts a path so current cannot cross the gap. A short circuit may offer an easier unintended path and can cause overheating or damage. Never short a real battery to test a hypothesis.
+
+Circuit diagrams distinguish components, connection nodes, and switches. When reasoning about a circuit, trace the current path from one source terminal through components and back to the other terminal.
+"
+R013,electronics,direct,Is a short circuit the same thing as an open circuit?,electronics/14_switch_positions.md,3,no,1,Defines an open switch as a gap but does not describe short-circuit faults.,"# Switches and conducting paths
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An ideal closed switch behaves like a conducting connection; an ideal open switch behaves like a gap. Whether a particular lamp lights depends on which current path the switch controls. In a branched circuit, opening one branch need not disconnect other complete branches.
+"
+R014,computer_science,direct,Why can two threads incrementing the same counter lose an update?,computer_science/01_threads_mutex.md,1,no,2,Explains that unsynchronized threads can overwrite shared-variable updates and that a mutex prevents this race.,"# Threads, shared state and mutual exclusion
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Threads are independent sequences of execution within a process. An operating system can interleave their instructions, and multiple cores can execute threads in parallel. Therefore one cannot assume two threads always take turns in a safe order.
+
+If two threads update the same mutable variable without synchronization, one update can overwrite another. A race condition occurs when the result depends on uncontrolled execution ordering. A mutex allows one thread at a time to enter a protected critical section, provided all participating code follows the locking discipline.
+
+A mutex does not make all programs correct automatically. Locks can introduce deadlocks if acquired inconsistently, and carefully scoped critical sections are important for performance and safety.
+"
+R014,computer_science,direct,Why can two threads incrementing the same counter lose an update?,computer_science/04_race_condition.md,2,yes,2,Explains non-atomic read-modify-write operations and races in shared mutable data.,"# Race conditions in shared data
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A race condition occurs when program behavior depends on the relative timing of concurrent operations, often because shared mutable data is accessed without suitable synchronization. A read-modify-write sequence is not necessarily atomic. A mutex can protect a critical section, but only when all relevant accesses follow the locking discipline.
+"
+R014,computer_science,direct,Why can two threads incrementing the same counter lose an update?,computer_science/06_process_vs_thread.md,3,no,1,"Notes that threads share memory and require synchronization, but does not describe losing a counter update.","# Processes versus threads
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A process normally has its own virtual address space and operating-system resources. Threads within a process share much of that address space but have separate execution state such as stacks and registers. Shared memory makes communication efficient but introduces synchronization risks.
+"
+R015,computer_science,direct,How can two threads become stuck while waiting for each other’s locks?,computer_science/01_threads_mutex.md,1,no,1,"Mentions that inconsistent lock acquisition can cause deadlock, but does not describe the circular waiting mechanism.","# Threads, shared state and mutual exclusion
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Threads are independent sequences of execution within a process. An operating system can interleave their instructions, and multiple cores can execute threads in parallel. Therefore one cannot assume two threads always take turns in a safe order.
+
+If two threads update the same mutable variable without synchronization, one update can overwrite another. A race condition occurs when the result depends on uncontrolled execution ordering. A mutex allows one thread at a time to enter a protected critical section, provided all participating code follows the locking discipline.
+
+A mutex does not make all programs correct automatically. Locks can introduce deadlocks if acquired inconsistently, and carefully scoped critical sections are important for performance and safety.
+"
+R015,computer_science,direct,How can two threads become stuck while waiting for each other’s locks?,computer_science/05_deadlock.md,2,yes,2,Explains circular waits in which threads hold resources while awaiting one another and gives lock ordering as prevention.,"# Deadlock and lock ordering
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Deadlock can arise when threads hold resources while waiting for other resources in a cycle, so none can proceed. A common prevention technique is acquiring multiple locks in a consistent global order. Mutual exclusion is not identical to deadlock; a correctly designed critical section can use locks without becoming deadlocked.
+"
+R015,computer_science,direct,How can two threads become stuck while waiting for each other’s locks?,computer_science/06_process_vs_thread.md,3,no,0,"Discusses process/thread memory sharing, not deadlock or circular lock waiting.","# Processes versus threads
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A process normally has its own virtual address space and operating-system resources. Threads within a process share much of that address space but have separate execution state such as stacks and registers. Shared memory makes communication efficient but introduces synchronization risks.
+"
+R016,computer_science,direct,Do threads in the same process share memory?,computer_science/06_process_vs_thread.md,1,yes,2,Explicitly contrasts separate process address spaces with threads sharing much of the same process address space.,"# Processes versus threads
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A process normally has its own virtual address space and operating-system resources. Threads within a process share much of that address space but have separate execution state such as stacks and registers. Shared memory makes communication efficient but introduces synchronization risks.
+"
+R016,computer_science,direct,Do threads in the same process share memory?,computer_science/01_threads_mutex.md,2,no,2,"Explains that multiple threads can operate on the same mutable variable, indicating shared memory within a process.","# Threads, shared state and mutual exclusion
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Threads are independent sequences of execution within a process. An operating system can interleave their instructions, and multiple cores can execute threads in parallel. Therefore one cannot assume two threads always take turns in a safe order.
+
+If two threads update the same mutable variable without synchronization, one update can overwrite another. A race condition occurs when the result depends on uncontrolled execution ordering. A mutex allows one thread at a time to enter a protected critical section, provided all participating code follows the locking discipline.
+
+A mutex does not make all programs correct automatically. Locks can introduce deadlocks if acquired inconsistently, and carefully scoped critical sections are important for performance and safety.
+"
+R016,computer_science,direct,Do threads in the same process share memory?,computer_science/04_race_condition.md,3,no,1,"Describes shared mutable data in concurrent operations, but does not explicitly compare threads in one process.","# Race conditions in shared data
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A race condition occurs when program behavior depends on the relative timing of concurrent operations, often because shared mutable data is accessed without suitable synchronization. A read-modify-write sequence is not necessarily atomic. A mutex can protect a critical section, but only when all relevant accesses follow the locking discipline.
+"
+R017,computer_science,direct,Why does recursion consume stack space?,computer_science/02_recursion.md,1,no,1,"Says recursive calls can continue until the call stack is exhausted, but does not explain the per-call stack frame.","# Recursion and base cases
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A recursive function calls itself directly or indirectly while solving a smaller instance of a problem. A terminating recursive algorithm needs a base case and a progression that eventually reaches the base case.
+
+Without effective progress toward a stopping condition, repeated recursive calls can continue until the call stack is exhausted. The base case is not merely an optimization; it defines when recursion stops and what result is returned.
+
+Iteration and recursion can express similar computations. Which is appropriate depends on problem structure, language runtime, readability and resource constraints.
+"
+R017,computer_science,direct,Why does recursion consume stack space?,computer_science/07_stack_heap.md,2,yes,2,Explains that the call stack holds function activation records; recursive calls each need their own call state.,"# Stack and heap memory
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A call stack tracks function activation records, including local execution state and return addresses. Heap memory typically holds dynamically allocated objects whose lifetime need not match a single function call. Neither stack nor heap should be equated with CPU cache. Exact memory placement depends on language and runtime.
+"
+R017,computer_science,direct,Why does recursion consume stack space?,computer_science/06_process_vs_thread.md,3,no,0,"Notes that threads have separate stacks, but does not explain recursive function calls.","# Processes versus threads
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A process normally has its own virtual address space and operating-system resources. Threads within a process share much of that address space but have separate execution state such as stacks and registers. Shared memory makes communication efficient but introduces synchronization risks.
+"
+R018,computer_science,direct,What happens when two different keys hash to the same bucket?,computer_science/08_hash_table_collisions.md,1,yes,2,Defines collisions as distinct keys mapping to one location and explains handling with chaining or probing.,"# Hash tables and collisions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A hash table maps keys to locations using a hash function. Distinct keys can map to the same slot, creating a collision; implementations handle collisions with strategies such as chaining or probing. Average-case lookup can be near constant time under suitable assumptions, but worst-case behavior can be slower.
+"
+R018,computer_science,direct,What happens when two different keys hash to the same bucket?,computer_science/03_data_structures.md,2,no,1,"Notes that hash-table collisions affect performance, but does not explain how two keys sharing a bucket are handled.","# Data structures and algorithmic tradeoffs
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A hash table typically supports expected constant-time lookup by key under appropriate assumptions, but collisions, resizing, and adversarial inputs can affect performance. Binary search on a sorted array uses O(log n) comparisons but requires sorted data.
+
+A stack follows last-in, first-out order; a queue follows first-in, first-out. A linked list can insert a node efficiently when the insertion position is already known, but locating an arbitrary element generally requires traversal.
+
+Statements about time complexity should specify the operation and assumptions; there is no single data structure that is always fastest for all operations.
+"
+R018,computer_science,direct,What happens when two different keys hash to the same bucket?,computer_science/01_threads_mutex.md,3,no,0,Discusses shared state and mutexes rather than hash-table collisions.,"# Threads, shared state and mutual exclusion
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Threads are independent sequences of execution within a process. An operating system can interleave their instructions, and multiple cores can execute threads in parallel. Therefore one cannot assume two threads always take turns in a safe order.
+
+If two threads update the same mutable variable without synchronization, one update can overwrite another. A race condition occurs when the result depends on uncontrolled execution ordering. A mutex allows one thread at a time to enter a protected critical section, provided all participating code follows the locking discipline.
+
+A mutex does not make all programs correct automatically. Locks can introduce deadlocks if acquired inconsistently, and carefully scoped critical sections are important for performance and safety.
+"
+R019,computer_science,direct,Why can binary search fail on an unsorted list?,computer_science/09_binary_search.md,1,yes,2,Explicitly states binary search needs ordered data and can miss items in unsorted data.,"# Binary search preconditions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Binary search narrows a search interval by comparing the target with an element near its middle. It requires data ordered consistently with the comparison being used. On a sorted array, lookup takes logarithmic comparisons in the worst case; applying it to arbitrary unsorted data can miss an item.
+"
+R019,computer_science,direct,Why can binary search fail on an unsorted list?,computer_science/03_data_structures.md,2,no,2,Says binary search requires sorted data; that directly explains the unsorted-list failure.,"# Data structures and algorithmic tradeoffs
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A hash table typically supports expected constant-time lookup by key under appropriate assumptions, but collisions, resizing, and adversarial inputs can affect performance. Binary search on a sorted array uses O(log n) comparisons but requires sorted data.
+
+A stack follows last-in, first-out order; a queue follows first-in, first-out. A linked list can insert a node efficiently when the insertion position is already known, but locating an arbitrary element generally requires traversal.
+
+Statements about time complexity should specify the operation and assumptions; there is no single data structure that is always fastest for all operations.
+"
+R019,computer_science,direct,Why can binary search fail on an unsorted list?,computer_science/08_hash_table_collisions.md,3,no,0,"Covers hash-table collisions and lookup, not the preconditions for binary search.","# Hash tables and collisions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A hash table maps keys to locations using a hash function. Distinct keys can map to the same slot, creating a collision; implementations handle collisions with strategies such as chaining or probing. Average-case lookup can be near constant time under suitable assumptions, but worst-case behavior can be slower.
+"
+R020,computer_science,direct,Which graph traversal finds the fewest-edge path in an unweighted graph?,computer_science/10_bfs_dfs.md,1,yes,2,"Says breadth-first search finds a minimum-edge path in an unweighted graph, unlike depth-first search.","# Breadth-first versus depth-first search
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Breadth-first search explores a graph level by level and can find a minimum-edge path in an unweighted graph. Depth-first search follows a path deeply before backtracking; it does not generally guarantee a shortest path. Both require handling previously visited vertices to avoid repeated cycles.
+"
+R020,computer_science,direct,Which graph traversal finds the fewest-edge path in an unweighted graph?,computer_science/09_binary_search.md,2,no,0,"Describes binary search over sorted data, not graph shortest paths.","# Binary search preconditions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Binary search narrows a search interval by comparing the target with an element near its middle. It requires data ordered consistently with the comparison being used. On a sorted array, lookup takes logarithmic comparisons in the worst case; applying it to arbitrary unsorted data can miss an item.
+"
+R020,computer_science,direct,Which graph traversal finds the fewest-edge path in an unweighted graph?,computer_science/03_data_structures.md,3,no,0,"Lists data-structure complexities, not breadth-first or depth-first graph traversal.","# Data structures and algorithmic tradeoffs
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A hash table typically supports expected constant-time lookup by key under appropriate assumptions, but collisions, resizing, and adversarial inputs can affect performance. Binary search on a sorted array uses O(log n) comparisons but requires sorted data.
+
+A stack follows last-in, first-out order; a queue follows first-in, first-out. A linked list can insert a node efficiently when the insertion position is already known, but locating an arbitrary element generally requires traversal.
+
+Statements about time complexity should specify the operation and assumptions; there is no single data structure that is always fastest for all operations.
+"
+R021,computer_science,direct,A model gets 99 percent training accuracy but poor test accuracy. What is likely happening?,computer_science/11_overfitting.md,1,yes,2,Explicitly identifies high train accuracy and low held-out accuracy as a warning sign of overfitting.,"# Overfitting and generalization
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Overfitting occurs when a model learns training-specific noise or patterns that do not generalize to unseen examples. High training accuracy with poor held-out performance is a warning sign. Regularization, appropriate data splits, and simpler models can reduce risk, but no single metric establishes generalization by itself.
+"
+R021,computer_science,direct,A model gets 99 percent training accuracy but poor test accuracy. What is likely happening?,computer_science/12_data_leakage.md,2,no,1,"Discusses contamination of evaluation splits, but not the typical overfitting pattern of training versus test accuracy.","# Data leakage in evaluation
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Data leakage happens when information unavailable at real deployment time influences model training or selection. Examples include fitting transformations using test data, copying near-duplicate examples across train and test, or inserting test answer labels into a RAG knowledge base. Keep held-out examples isolated from decisions that tune the system.
+"
+R021,computer_science,direct,A model gets 99 percent training accuracy but poor test accuracy. What is likely happening?,computer_science/14_rag_grounding.md,3,no,0,"Explains RAG grounding, not the gap between classifier training and test performance.","# Retrieval-augmented generation and grounding
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Retrieval-augmented generation first selects external passages and then supplies them to a generator as context. This can make an answer more grounded and traceable, but retrieval errors and hallucinations remain possible. Evaluate retrieval separately from generation and verify claims against returned evidence.
+"
+R022,computer_science,direct,Why must test answer labels never be indexed into the retrieval knowledge base?,computer_science/13_embeddings.md,1,no,0,"Explains semantic embeddings, not why test labels must be excluded from training or retrieval evidence.","# Sentence embeddings and semantic search
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A sentence embedding is a numeric vector representing aspects of text meaning. Vector retrieval compares query and passage embeddings to find related content even when they use different words. Similarity is not a proof of factual correctness, and a nearest neighbor can still be irrelevant.
+"
+R022,computer_science,direct,Why must test answer labels never be indexed into the retrieval knowledge base?,computer_science/14_rag_grounding.md,2,no,1,"Describes retrieval-provided context, but does not directly warn against indexing test answer labels.","# Retrieval-augmented generation and grounding
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Retrieval-augmented generation first selects external passages and then supplies them to a generator as context. This can make an answer more grounded and traceable, but retrieval errors and hallucinations remain possible. Evaluate retrieval separately from generation and verify claims against returned evidence.
+"
+R022,computer_science,direct,Why must test answer labels never be indexed into the retrieval knowledge base?,computer_science/12_data_leakage.md,3,yes,2,Explicitly identifies inserting test answer labels into a RAG knowledge base as data leakage.,"# Data leakage in evaluation
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Data leakage happens when information unavailable at real deployment time influences model training or selection. Examples include fitting transformations using test data, copying near-duplicate examples across train and test, or inserting test answer labels into a RAG knowledge base. Keep held-out examples isolated from decisions that tune the system.
+"
+R023,computer_science,direct,How can semantic search find passages without matching exact keywords?,computer_science/13_embeddings.md,1,yes,2,"States that sentence embeddings represent meaning, allowing related passages to match without shared keywords.","# Sentence embeddings and semantic search
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A sentence embedding is a numeric vector representing aspects of text meaning. Vector retrieval compares query and passage embeddings to find related content even when they use different words. Similarity is not a proof of factual correctness, and a nearest neighbor can still be irrelevant.
+"
+R023,computer_science,direct,How can semantic search find passages without matching exact keywords?,computer_science/09_binary_search.md,2,no,0,"Explains binary search on sorted data, not semantic text retrieval.","# Binary search preconditions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Binary search narrows a search interval by comparing the target with an element near its middle. It requires data ordered consistently with the comparison being used. On a sorted array, lookup takes logarithmic comparisons in the worst case; applying it to arbitrary unsorted data can miss an item.
+"
+R023,computer_science,direct,How can semantic search find passages without matching exact keywords?,computer_science/14_rag_grounding.md,3,no,1,"Says RAG selects external passages, but does not explain how semantic similarity works.","# Retrieval-augmented generation and grounding
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Retrieval-augmented generation first selects external passages and then supplies them to a generator as context. This can make an answer more grounded and traceable, but retrieval errors and hallucinations remain possible. Evaluate retrieval separately from generation and verify claims against returned evidence.
+"
+R024,computer_science,direct,How does RAG differ from asking an LLM without retrieved documents?,computer_science/14_rag_grounding.md,1,yes,2,Explains retrieval-augmented generation: it supplies selected external passages to a language model as context.,"# Retrieval-augmented generation and grounding
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Retrieval-augmented generation first selects external passages and then supplies them to a generator as context. This can make an answer more grounded and traceable, but retrieval errors and hallucinations remain possible. Evaluate retrieval separately from generation and verify claims against returned evidence.
+"
+R024,computer_science,direct,How does RAG differ from asking an LLM without retrieved documents?,computer_science/13_embeddings.md,2,no,1,Explains passage retrieval by embeddings but not how an LLM uses that retrieval to generate an answer.,"# Sentence embeddings and semantic search
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A sentence embedding is a numeric vector representing aspects of text meaning. Vector retrieval compares query and passage embeddings to find related content even when they use different words. Similarity is not a proof of factual correctness, and a nearest neighbor can still be irrelevant.
+"
+R024,computer_science,direct,How does RAG differ from asking an LLM without retrieved documents?,computer_science/12_data_leakage.md,3,no,0,"Describes evaluation leakage, not the difference between RAG and an ungrounded LLM response.","# Data leakage in evaluation
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Data leakage happens when information unavailable at real deployment time influences model training or selection. Examples include fitting transformations using test data, copying near-duplicate examples across train and test, or inserting test answer labels into a RAG knowledge base. Keep held-out examples isolated from decisions that tune the system.
+"
+R025,electronics,direct,Why does a bulb go dark when its only circuit path is broken?,electronics/03_series_parallel.md,1,no,2,"Says a break in a sole series path stops current throughout the loop, explaining why the bulb goes dark.","# Series and parallel circuits
+
+**Concept notes written for the ConceptLens starter demo.**
+
+In a single-loop series circuit, all components lie on one path. The same current flows through each component in that loop under steady-state conditions. If one component breaks the loop, current stops throughout the loop.
+
+In parallel circuits, branches provide separate conductive paths between common connection points. Opening one branch can stop current there while other complete branches continue to carry current. The same voltage appears across ideal parallel branches sharing the same pair of nodes.
+
+Do not conclude that every bulb must go out when any bulb fails: the effect depends on whether the circuit is series or parallel, and where the break occurs. Understanding which paths remain closed is more reliable than memorizing a slogan.
+"
+R025,electronics,direct,Why does a bulb go dark when its only circuit path is broken?,electronics/01_closed_circuits.md,2,yes,2,Directly explains that opening a gap interrupts current and a bulb goes dark because its loop is broken.,"# Closed paths, open circuits, and bulbs
+
+**Concept notes written for the ConceptLens starter demo; not a reference to any BEETLE answer or label.**
+
+A simple battery–wire–bulb circuit lights the bulb when a complete conducting path connects the two battery terminals through the bulb. Current can flow around this closed loop, and the bulb converts electrical energy into light and heat.
+
+Opening a switch creates a gap in a path and interrupts current in that path. The bulb goes out because the conducting loop is broken; the fact that it is dark does not, by itself, mean the battery's stored chemical energy has been exhausted.
+
+A switch does not normally consume all the charge in the battery. It changes whether the current path is complete. A battery can still maintain a potential difference across its terminals while the circuit is open, although no steady current flows through an ideal open switch.
+"
+R025,electronics,direct,Why does a bulb go dark when its only circuit path is broken?,electronics/05_conductors.md,3,no,1,"States a lamp needs a complete path to light, but gives less direct explanation of opening the sole path.","# Conductors, insulators and charge
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Metals generally conduct because some electrons can move through the material. Insulators resist charge motion under ordinary conditions. Whether a bulb lights depends on both the material in the loop and whether the path is complete.
+
+Electrons are not created by a light bulb, and a lamp does not consume electrons as if they were fuel. Electrical energy supplied by the source is converted to heat and light in the lamp.
+
+An open air gap is usually insulating at ordinary low voltages, but extremely high voltages can cause dielectric breakdown. Basic circuit questions usually assume a simple ideal opening that prevents current.
+"
+R026,electronics,direct,What is the difference between electric current and voltage?,electronics/02_voltage_current.md,1,yes,2,"Explicitly defines voltage as potential difference and current as rate of charge flow, with respective units.","# Voltage, current, battery and resistance
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Voltage is electric potential difference between two points, measured in volts. A battery uses chemical reactions to maintain an electrical potential difference between its terminals.
+
+Electric current is the rate of flow of electric charge, measured in amperes. Current through a component requires a conducting path and a driving potential difference. Charge is not normally used up at a component; energy is transferred.
+
+Resistance describes how strongly a component opposes current under specified conditions. For an ohmic resistor, the relationship between voltage V, current I, and resistance R is V = I R.
+
+A voltage reading between two points is not the same thing as the current flowing through a device. A voltmeter connects across the two points; an ammeter is commonly inserted in series with the branch of interest.
+"
+R026,electronics,direct,What is the difference between electric current and voltage?,electronics/13_ground_reference.md,2,no,1,"Defines voltage as a difference in potential, but does not define current.","# Ground and voltage reference
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Voltage is a difference in electric potential between two points, never a stand-alone absolute quantity. A ground symbol may define the chosen zero-volt reference for analysis; it does not guarantee that current has an available return path. Protective earth grounding is a separate safety concept from the abstract circuit reference node.
+"
+R026,electronics,direct,What is the difference between electric current and voltage?,electronics/11_power_energy.md,3,no,0,"Defines power and energy using voltage and current, without distinguishing the two quantities.","# Electrical power and energy
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Electrical power is the rate at which electrical energy is transferred: P = V × I for a device using the passive sign convention. Energy transferred over a constant interval is E = P × t. Power is measured in watts, energy in joules. A bright lamp can consume more power without implying that electrons are being destroyed.
+"
+R027,electronics,direct,How does failure of one bulb affect lights in series compared with parallel?,electronics/03_series_parallel.md,1,yes,2,Explicitly contrasts series failure stopping all current with parallel branches that can stay lit.,"# Series and parallel circuits
+
+**Concept notes written for the ConceptLens starter demo.**
+
+In a single-loop series circuit, all components lie on one path. The same current flows through each component in that loop under steady-state conditions. If one component breaks the loop, current stops throughout the loop.
+
+In parallel circuits, branches provide separate conductive paths between common connection points. Opening one branch can stop current there while other complete branches continue to carry current. The same voltage appears across ideal parallel branches sharing the same pair of nodes.
+
+Do not conclude that every bulb must go out when any bulb fails: the effect depends on whether the circuit is series or parallel, and where the break occurs. Understanding which paths remain closed is more reliable than memorizing a slogan.
+"
+R027,electronics,direct,How does failure of one bulb affect lights in series compared with parallel?,electronics/06_resistance_ohms_law.md,2,no,0,"Describes Ohm’s law and filament resistance, not series-versus-parallel bulb failures.","# Resistance and Ohm’s law
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Resistance describes how strongly a component opposes current. For an ohmic component under fixed conditions, voltage, current, and resistance satisfy V = I × R. At the same voltage, greater resistance means less current. This relation does not say that every component has a fixed resistance: a filament lamp changes resistance as it heats.
+"
+R027,electronics,direct,How does failure of one bulb affect lights in series compared with parallel?,electronics/15_resistors_series.md,3,no,0,"Covers equivalent resistance in a series chain, not how failed bulbs affect series versus parallel lights.","# Equivalent resistance in series
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+For ideal resistors in series, equivalent resistance is the sum of their resistances. Adding series resistance to a fixed-voltage circuit generally reduces total current. This does not mean that current is progressively consumed as it passes each resistor.
+"
+R028,electronics,direct,Why can a wire bypassing a bulb make a short circuit?,electronics/03_series_parallel.md,1,no,0,"Explains single versus parallel paths, but does not discuss a bypass around a bulb as a short circuit.","# Series and parallel circuits
+
+**Concept notes written for the ConceptLens starter demo.**
+
+In a single-loop series circuit, all components lie on one path. The same current flows through each component in that loop under steady-state conditions. If one component breaks the loop, current stops throughout the loop.
+
+In parallel circuits, branches provide separate conductive paths between common connection points. Opening one branch can stop current there while other complete branches continue to carry current. The same voltage appears across ideal parallel branches sharing the same pair of nodes.
+
+Do not conclude that every bulb must go out when any bulb fails: the effect depends on whether the circuit is series or parallel, and where the break occurs. Understanding which paths remain closed is more reliable than memorizing a slogan.
+"
+R028,electronics,direct,Why can a wire bypassing a bulb make a short circuit?,electronics/04_short_circuits.md,2,yes,2,"Defines a short as a low-resistance path that can bypass a load, directly matching a wire bypassing the bulb.","# Short circuits and safe reasoning
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A short circuit is an unintended very low-resistance path between points of different potential, or a path that bypasses a load. It can cause a large current limited by the actual resistance and internal resistance of the source.
+
+A short circuit is different from an open circuit. An open circuit interrupts a path so current cannot cross the gap. A short circuit may offer an easier unintended path and can cause overheating or damage. Never short a real battery to test a hypothesis.
+
+Circuit diagrams distinguish components, connection nodes, and switches. When reasoning about a circuit, trace the current path from one source terminal through components and back to the other terminal.
+"
+R028,electronics,direct,Why can a wire bypassing a bulb make a short circuit?,electronics/01_closed_circuits.md,3,no,0,"Discusses an open circuit interrupting the loop, not a wire shorting around a lamp.","# Closed paths, open circuits, and bulbs
+
+**Concept notes written for the ConceptLens starter demo; not a reference to any BEETLE answer or label.**
+
+A simple battery–wire–bulb circuit lights the bulb when a complete conducting path connects the two battery terminals through the bulb. Current can flow around this closed loop, and the bulb converts electrical energy into light and heat.
+
+Opening a switch creates a gap in a path and interrupts current in that path. The bulb goes out because the conducting loop is broken; the fact that it is dark does not, by itself, mean the battery's stored chemical energy has been exhausted.
+
+A switch does not normally consume all the charge in the battery. It changes whether the current path is complete. A battery can still maintain a potential difference across its terminals while the circuit is open, although no steady current flows through an ideal open switch.
+"
+R029,electronics,direct,What role does insulation play around a metal conducting wire?,electronics/05_conductors.md,1,yes,2,Contrasts conductors and insulators and explains why an insulating cover limits unwanted charge motion.,"# Conductors, insulators and charge
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Metals generally conduct because some electrons can move through the material. Insulators resist charge motion under ordinary conditions. Whether a bulb lights depends on both the material in the loop and whether the path is complete.
+
+Electrons are not created by a light bulb, and a lamp does not consume electrons as if they were fuel. Electrical energy supplied by the source is converted to heat and light in the lamp.
+
+An open air gap is usually insulating at ordinary low voltages, but extremely high voltages can cause dielectric breakdown. Basic circuit questions usually assume a simple ideal opening that prevents current.
+"
+R029,electronics,direct,What role does insulation play around a metal conducting wire?,electronics/17_conductor_insulator.md,2,no,2,States that plastic-like insulators strongly limit charge motion compared with metal conductors.,"# Conductors and insulators
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+In ordinary circuit contexts, conductors such as copper permit charges to move comparatively easily, while insulators such as dry plastic strongly limit that motion. Their behavior depends on conditions and material properties. Insulators are not perfectly incapable of carrying charge under every possible voltage.
+"
+R029,electronics,direct,What role does insulation play around a metal conducting wire?,electronics/08_current_conservation.md,3,no,0,"Explains current conservation at junctions, not insulating covering on a wire.","# Current conservation at junctions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Charge does not disappear at a circuit junction. In steady state, total current entering a junction equals total current leaving it. In parallel branches current divides according to electrical properties; current is not necessarily split equally. This rule concerns current, not equal voltage everywhere.
+"
+R030,computer_science,direct,Why do programs use a mutex for a shared critical section?,computer_science/01_threads_mutex.md,1,yes,2,"Explains a mutex allows only one thread into a protected critical section, preventing races on shared state.","# Threads, shared state and mutual exclusion
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Threads are independent sequences of execution within a process. An operating system can interleave their instructions, and multiple cores can execute threads in parallel. Therefore one cannot assume two threads always take turns in a safe order.
+
+If two threads update the same mutable variable without synchronization, one update can overwrite another. A race condition occurs when the result depends on uncontrolled execution ordering. A mutex allows one thread at a time to enter a protected critical section, provided all participating code follows the locking discipline.
+
+A mutex does not make all programs correct automatically. Locks can introduce deadlocks if acquired inconsistently, and carefully scoped critical sections are important for performance and safety.
+"
+R030,computer_science,direct,Why do programs use a mutex for a shared critical section?,computer_science/04_race_condition.md,2,no,2,States that a mutex protects a critical section from unsafe shared-data races when access follows the lock discipline.,"# Race conditions in shared data
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A race condition occurs when program behavior depends on the relative timing of concurrent operations, often because shared mutable data is accessed without suitable synchronization. A read-modify-write sequence is not necessarily atomic. A mutex can protect a critical section, but only when all relevant accesses follow the locking discipline.
+"
+R030,computer_science,direct,Why do programs use a mutex for a shared critical section?,computer_science/06_process_vs_thread.md,3,no,1,"States threads share memory and may require synchronization, but does not explain mutex operation.","# Processes versus threads
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A process normally has its own virtual address space and operating-system resources. Threads within a process share much of that address space but have separate execution state such as stacks and registers. Shared memory makes communication efficient but introduces synchronization risks.
+"
+R031,computer_science,direct,What must a recursive function have to terminate?,computer_science/02_recursion.md,1,yes,2,Explicitly says a terminating recursive function needs a base case and progress toward reaching it.,"# Recursion and base cases
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A recursive function calls itself directly or indirectly while solving a smaller instance of a problem. A terminating recursive algorithm needs a base case and a progression that eventually reaches the base case.
+
+Without effective progress toward a stopping condition, repeated recursive calls can continue until the call stack is exhausted. The base case is not merely an optimization; it defines when recursion stops and what result is returned.
+
+Iteration and recursion can express similar computations. Which is appropriate depends on problem structure, language runtime, readability and resource constraints.
+"
+R031,computer_science,direct,What must a recursive function have to terminate?,computer_science/07_stack_heap.md,2,no,1,"Explains call-stack frames and function lifetimes, but not recursion termination or base cases.","# Stack and heap memory
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A call stack tracks function activation records, including local execution state and return addresses. Heap memory typically holds dynamically allocated objects whose lifetime need not match a single function call. Neither stack nor heap should be equated with CPU cache. Exact memory placement depends on language and runtime.
+"
+R031,computer_science,direct,What must a recursive function have to terminate?,computer_science/09_binary_search.md,3,no,0,"Explains binary search preconditions, not recursive termination.","# Binary search preconditions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Binary search narrows a search interval by comparing the target with an element near its middle. It requires data ordered consistently with the comparison being used. On a sorted array, lookup takes logarithmic comparisons in the worst case; applying it to arbitrary unsorted data can miss an item.
+"
+R032,computer_science,direct,Why choose a queue rather than a stack for FIFO processing?,computer_science/06_process_vs_thread.md,1,no,0,Compares processes and threads; contains no discussion of first-in-first-out queues.,"# Processes versus threads
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A process normally has its own virtual address space and operating-system resources. Threads within a process share much of that address space but have separate execution state such as stacks and registers. Shared memory makes communication efficient but introduces synchronization risks.
+"
+R032,computer_science,direct,Why choose a queue rather than a stack for FIFO processing?,computer_science/07_stack_heap.md,2,no,0,"Discusses call-stack versus heap memory, not LIFO stack and FIFO queue data structures.","# Stack and heap memory
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A call stack tracks function activation records, including local execution state and return addresses. Heap memory typically holds dynamically allocated objects whose lifetime need not match a single function call. Neither stack nor heap should be equated with CPU cache. Exact memory placement depends on language and runtime.
+"
+R032,computer_science,direct,Why choose a queue rather than a stack for FIFO processing?,computer_science/01_threads_mutex.md,3,no,0,Covers concurrent threads and mutexes; does not compare queue and stack ordering.,"# Threads, shared state and mutual exclusion
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Threads are independent sequences of execution within a process. An operating system can interleave their instructions, and multiple cores can execute threads in parallel. Therefore one cannot assume two threads always take turns in a safe order.
+
+If two threads update the same mutable variable without synchronization, one update can overwrite another. A race condition occurs when the result depends on uncontrolled execution ordering. A mutex allows one thread at a time to enter a protected critical section, provided all participating code follows the locking discipline.
+
+A mutex does not make all programs correct automatically. Locks can introduce deadlocks if acquired inconsistently, and carefully scoped critical sections are important for performance and safety.
+"
+R032,computer_science,direct,Why choose a queue rather than a stack for FIFO processing?,computer_science/03_data_structures.md,,yes,2,"Explicitly states a queue is FIFO and a stack is LIFO, explaining why a queue fits FIFO processing.","# Data structures and algorithmic tradeoffs
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A hash table typically supports expected constant-time lookup by key under appropriate assumptions, but collisions, resizing, and adversarial inputs can affect performance. Binary search on a sorted array uses O(log n) comparisons but requires sorted data.
+
+A stack follows last-in, first-out order; a queue follows first-in, first-out. A linked list can insert a node efficiently when the insertion position is already known, but locating an arbitrary element generally requires traversal.
+
+Statements about time complexity should specify the operation and assumptions; there is no single data structure that is always fastest for all operations.
+"
+R033,electronics,paraphrase,Why does a higher resistance reduce electric current at constant voltage?,electronics/06_resistance_ohms_law.md,1,yes,2,States Ohm’s law and directly says greater resistance at the same voltage means less current.,"# Resistance and Ohm’s law
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Resistance describes how strongly a component opposes current. For an ohmic component under fixed conditions, voltage, current, and resistance satisfy V = I × R. At the same voltage, greater resistance means less current. This relation does not say that every component has a fixed resistance: a filament lamp changes resistance as it heats.
+"
+R033,electronics,paraphrase,Why does a higher resistance reduce electric current at constant voltage?,electronics/02_voltage_current.md,2,no,2,"Explains V = IR for an ohmic resistor, permitting the conclusion that current decreases as R increases for fixed V.","# Voltage, current, battery and resistance
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Voltage is electric potential difference between two points, measured in volts. A battery uses chemical reactions to maintain an electrical potential difference between its terminals.
+
+Electric current is the rate of flow of electric charge, measured in amperes. Current through a component requires a conducting path and a driving potential difference. Charge is not normally used up at a component; energy is transferred.
+
+Resistance describes how strongly a component opposes current under specified conditions. For an ohmic resistor, the relationship between voltage V, current I, and resistance R is V = I R.
+
+A voltage reading between two points is not the same thing as the current flowing through a device. A voltmeter connects across the two points; an ammeter is commonly inserted in series with the branch of interest.
+"
+R033,electronics,paraphrase,Why does a higher resistance reduce electric current at constant voltage?,electronics/15_resistors_series.md,3,no,1,"Says adding series resistance reduces total current at fixed source voltage, a related but narrower case.","# Equivalent resistance in series
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+For ideal resistors in series, equivalent resistance is the sum of their resistances. Adding series resistance to a fixed-voltage circuit generally reduces total current. This does not mean that current is progressively consumed as it passes each resistor.
+"
+R034,electronics,paraphrase,Why can the current in two parallel branches be different?,electronics/09_voltage_parallel.md,1,no,2,Explicitly states parallel branches have equal voltage but can carry different currents because resistances differ.,"# Voltage across parallel branches
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Components connected between the same two circuit nodes have the same voltage across them. In a simple parallel circuit, each complete branch sees the source terminal voltage, aside from nonideal effects. Identical voltage does not imply identical current, because branch resistances may differ.
+"
+R034,electronics,paraphrase,Why can the current in two parallel branches be different?,electronics/16_resistors_parallel.md,2,no,1,"Discusses parallel branches with the same voltage and their equivalent resistance, but not the reason currents differ.","# Equivalent resistance in parallel
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+For ideal resistors in parallel, reciprocal equivalent resistance equals the sum of reciprocal branch resistances. Adding another parallel branch reduces equivalent resistance across the same nodes and can increase total current drawn from a fixed-voltage source. Each existing ideal branch still has the same applied voltage.
+"
+R034,electronics,paraphrase,Why can the current in two parallel branches be different?,electronics/03_series_parallel.md,3,no,1,"Defines parallel branches as distinct paths with the same voltage, without explaining unequal branch currents.","# Series and parallel circuits
+
+**Concept notes written for the ConceptLens starter demo.**
+
+In a single-loop series circuit, all components lie on one path. The same current flows through each component in that loop under steady-state conditions. If one component breaks the loop, current stops throughout the loop.
+
+In parallel circuits, branches provide separate conductive paths between common connection points. Opening one branch can stop current there while other complete branches continue to carry current. The same voltage appears across ideal parallel branches sharing the same pair of nodes.
+
+Do not conclude that every bulb must go out when any bulb fails: the effect depends on whether the circuit is series or parallel, and where the break occurs. Understanding which paths remain closed is more reliable than memorizing a slogan.
+"
+R034,electronics,paraphrase,Why can the current in two parallel branches be different?,electronics/08_current_conservation.md,,yes,2,Explicitly states parallel currents are not necessarily equal because division depends on electrical properties.,"# Current conservation at junctions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Charge does not disappear at a circuit junction. In steady state, total current entering a junction equals total current leaving it. In parallel branches current divides according to electrical properties; current is not necessarily split equally. This rule concerns current, not equal voltage everywhere.
+"
+R035,electronics,paraphrase,Why can some bulbs remain lit when one branch is opened?,electronics/01_closed_circuits.md,1,no,1,"Shows that an open path stops current in that path, but does not explain why another branch can remain lit.","# Closed paths, open circuits, and bulbs
+
+**Concept notes written for the ConceptLens starter demo; not a reference to any BEETLE answer or label.**
+
+A simple battery–wire–bulb circuit lights the bulb when a complete conducting path connects the two battery terminals through the bulb. Current can flow around this closed loop, and the bulb converts electrical energy into light and heat.
+
+Opening a switch creates a gap in a path and interrupts current in that path. The bulb goes out because the conducting loop is broken; the fact that it is dark does not, by itself, mean the battery's stored chemical energy has been exhausted.
+
+A switch does not normally consume all the charge in the battery. It changes whether the current path is complete. A battery can still maintain a potential difference across its terminals while the circuit is open, although no steady current flows through an ideal open switch.
+"
+R035,electronics,paraphrase,Why can some bulbs remain lit when one branch is opened?,electronics/14_switch_positions.md,2,yes,2,Directly says opening one branch need not disconnect other complete branches.,"# Switches and conducting paths
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An ideal closed switch behaves like a conducting connection; an ideal open switch behaves like a gap. Whether a particular lamp lights depends on which current path the switch controls. In a branched circuit, opening one branch need not disconnect other complete branches.
+"
+R035,electronics,paraphrase,Why can some bulbs remain lit when one branch is opened?,electronics/03_series_parallel.md,3,no,2,Explains that parallel branches are separate paths and some can remain conducting when another is opened.,"# Series and parallel circuits
+
+**Concept notes written for the ConceptLens starter demo.**
+
+In a single-loop series circuit, all components lie on one path. The same current flows through each component in that loop under steady-state conditions. If one component breaks the loop, current stops throughout the loop.
+
+In parallel circuits, branches provide separate conductive paths between common connection points. Opening one branch can stop current there while other complete branches continue to carry current. The same voltage appears across ideal parallel branches sharing the same pair of nodes.
+
+Do not conclude that every bulb must go out when any bulb fails: the effect depends on whether the circuit is series or parallel, and where the break occurs. Understanding which paths remain closed is more reliable than memorizing a slogan.
+"
+R036,electronics,paraphrase,Why can a short circuit be dangerous even though an open circuit stops current?,electronics/04_short_circuits.md,1,no,2,Explains a short may cause high current and overheating while an open circuit interrupts current through a gap.,"# Short circuits and safe reasoning
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A short circuit is an unintended very low-resistance path between points of different potential, or a path that bypasses a load. It can cause a large current limited by the actual resistance and internal resistance of the source.
+
+A short circuit is different from an open circuit. An open circuit interrupts a path so current cannot cross the gap. A short circuit may offer an easier unintended path and can cause overheating or damage. Never short a real battery to test a hypothesis.
+
+Circuit diagrams distinguish components, connection nodes, and switches. When reasoning about a circuit, trace the current path from one source terminal through components and back to the other terminal.
+"
+R036,electronics,paraphrase,Why can a short circuit be dangerous even though an open circuit stops current?,electronics/18_open_vs_short.md,2,yes,2,Directly distinguishes open faults from shorts that may divert large currents through low-resistance paths.,"# Open faults versus short faults
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An open circuit breaks the intended conducting path, so current through that path stops. A short circuit provides a low-resistance unintended path, potentially causing excessive current and diverting current away from a load. These failures are not interchangeable: a short does not merely mean the circuit is switched off.
+"
+R036,electronics,paraphrase,Why can a short circuit be dangerous even though an open circuit stops current?,electronics/05_conductors.md,3,no,1,"Notes ordinary insulation and dielectric breakdown, but does not explain why shorts may cause dangerous currents.","# Conductors, insulators and charge
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Metals generally conduct because some electrons can move through the material. Insulators resist charge motion under ordinary conditions. Whether a bulb lights depends on both the material in the loop and whether the path is complete.
+
+Electrons are not created by a light bulb, and a lamp does not consume electrons as if they were fuel. Electrical energy supplied by the source is converted to heat and light in the lamp.
+
+An open air gap is usually insulating at ordinary low voltages, but extremely high voltages can cause dielectric breakdown. Basic circuit questions usually assume a simple ideal opening that prevents current.
+"
+R037,computer_science,paraphrase,Does using two threads always guarantee the correct final count?,computer_science/01_threads_mutex.md,1,no,2,Explains two unsynchronized threads can overwrite shared counter updates due to uncontrolled ordering.,"# Threads, shared state and mutual exclusion
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Threads are independent sequences of execution within a process. An operating system can interleave their instructions, and multiple cores can execute threads in parallel. Therefore one cannot assume two threads always take turns in a safe order.
+
+If two threads update the same mutable variable without synchronization, one update can overwrite another. A race condition occurs when the result depends on uncontrolled execution ordering. A mutex allows one thread at a time to enter a protected critical section, provided all participating code follows the locking discipline.
+
+A mutex does not make all programs correct automatically. Locks can introduce deadlocks if acquired inconsistently, and carefully scoped critical sections are important for performance and safety.
+"
+R037,computer_science,paraphrase,Does using two threads always guarantee the correct final count?,computer_science/05_deadlock.md,2,no,0,"Explains deadlock due to lock waiting, not incorrect counter results from unsynchronized increments.","# Deadlock and lock ordering
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Deadlock can arise when threads hold resources while waiting for other resources in a cycle, so none can proceed. A common prevention technique is acquiring multiple locks in a consistent global order. Mutual exclusion is not identical to deadlock; a correctly designed critical section can use locks without becoming deadlocked.
+"
+R037,computer_science,paraphrase,Does using two threads always guarantee the correct final count?,computer_science/06_process_vs_thread.md,3,no,1,"Mentions shared memory and synchronization risks, but not the lost-update problem for counters.","# Processes versus threads
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A process normally has its own virtual address space and operating-system resources. Threads within a process share much of that address space but have separate execution state such as stacks and registers. Shared memory makes communication efficient but introduces synchronization risks.
+"
+R037,computer_science,paraphrase,Does using two threads always guarantee the correct final count?,computer_science/04_race_condition.md,,yes,2,"Explains non-atomic read-modify-write operations and races, which can cause incorrect final counts.","# Race conditions in shared data
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A race condition occurs when program behavior depends on the relative timing of concurrent operations, often because shared mutable data is accessed without suitable synchronization. A read-modify-write sequence is not necessarily atomic. A mutex can protect a critical section, but only when all relevant accesses follow the locking discipline.
+"
+R038,computer_science,paraphrase,What is the difference between a process and a thread?,computer_science/06_process_vs_thread.md,1,yes,2,Explicitly contrasts separate process address spaces/resources with threads sharing memory but keeping execution state.,"# Processes versus threads
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A process normally has its own virtual address space and operating-system resources. Threads within a process share much of that address space but have separate execution state such as stacks and registers. Shared memory makes communication efficient but introduces synchronization risks.
+"
+R038,computer_science,paraphrase,What is the difference between a process and a thread?,computer_science/01_threads_mutex.md,2,no,1,"Defines threads as execution sequences inside a process, but does not contrast process and thread resource isolation.","# Threads, shared state and mutual exclusion
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Threads are independent sequences of execution within a process. An operating system can interleave their instructions, and multiple cores can execute threads in parallel. Therefore one cannot assume two threads always take turns in a safe order.
+
+If two threads update the same mutable variable without synchronization, one update can overwrite another. A race condition occurs when the result depends on uncontrolled execution ordering. A mutex allows one thread at a time to enter a protected critical section, provided all participating code follows the locking discipline.
+
+A mutex does not make all programs correct automatically. Locks can introduce deadlocks if acquired inconsistently, and carefully scoped critical sections are important for performance and safety.
+"
+R038,computer_science,paraphrase,What is the difference between a process and a thread?,computer_science/04_race_condition.md,3,no,0,"Describes race conditions in shared data, not the distinction between processes and threads.","# Race conditions in shared data
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A race condition occurs when program behavior depends on the relative timing of concurrent operations, often because shared mutable data is accessed without suitable synchronization. A read-modify-write sequence is not necessarily atomic. A mutex can protect a critical section, but only when all relevant accesses follow the locking discipline.
+"
+R039,computer_science,paraphrase,Why do we evaluate a classifier on held-out data?,computer_science/12_data_leakage.md,1,no,1,"Explains test leakage and keeping held-out data separate, but not directly that held-out evaluation measures generalization.","# Data leakage in evaluation
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Data leakage happens when information unavailable at real deployment time influences model training or selection. Examples include fitting transformations using test data, copying near-duplicate examples across train and test, or inserting test answer labels into a RAG knowledge base. Keep held-out examples isolated from decisions that tune the system.
+"
+R039,computer_science,paraphrase,Why do we evaluate a classifier on held-out data?,computer_science/11_overfitting.md,2,yes,2,States that held-out performance tests whether the model generalizes beyond training-specific patterns.,"# Overfitting and generalization
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Overfitting occurs when a model learns training-specific noise or patterns that do not generalize to unseen examples. High training accuracy with poor held-out performance is a warning sign. Regularization, appropriate data splits, and simpler models can reduce risk, but no single metric establishes generalization by itself.
+"
+R039,computer_science,paraphrase,Why do we evaluate a classifier on held-out data?,computer_science/03_data_structures.md,3,no,0,"Describes data-structure tradeoffs, not held-out model evaluation.","# Data structures and algorithmic tradeoffs
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A hash table typically supports expected constant-time lookup by key under appropriate assumptions, but collisions, resizing, and adversarial inputs can affect performance. Binary search on a sorted array uses O(log n) comparisons but requires sorted data.
+
+A stack follows last-in, first-out order; a queue follows first-in, first-out. A linked list can insert a node efficiently when the insertion position is already known, but locating an arbitrary element generally requires traversal.
+
+Statements about time complexity should specify the operation and assumptions; there is no single data structure that is always fastest for all operations.
+"
+R040,computer_science,paraphrase,Can RAG still hallucinate despite showing citations?,computer_science/14_rag_grounding.md,1,yes,2,Explicitly states retrieval errors and hallucinations remain possible even when RAG is grounded in cited passages.,"# Retrieval-augmented generation and grounding
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Retrieval-augmented generation first selects external passages and then supplies them to a generator as context. This can make an answer more grounded and traceable, but retrieval errors and hallucinations remain possible. Evaluate retrieval separately from generation and verify claims against returned evidence.
+"
+R040,computer_science,paraphrase,Can RAG still hallucinate despite showing citations?,computer_science/12_data_leakage.md,2,no,0,"Discusses test contamination, not hallucinated claims or the reliability of cited RAG answers.","# Data leakage in evaluation
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Data leakage happens when information unavailable at real deployment time influences model training or selection. Examples include fitting transformations using test data, copying near-duplicate examples across train and test, or inserting test answer labels into a RAG knowledge base. Keep held-out examples isolated from decisions that tune the system.
+"
+R040,computer_science,paraphrase,Can RAG still hallucinate despite showing citations?,computer_science/04_race_condition.md,3,no,0,"Covers concurrent programming races, not hallucinations in retrieval-augmented generation.","# Race conditions in shared data
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A race condition occurs when program behavior depends on the relative timing of concurrent operations, often because shared mutable data is accessed without suitable synchronization. A read-modify-write sequence is not necessarily atomic. A mutex can protect a critical section, but only when all relevant accesses follow the locking discipline.
+"
