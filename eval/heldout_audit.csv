@@ -1,0 +1,407 @@
+﻿case_id,subject,query,source,passage,relevance,rationale
+H011,computer_science,A function keeps calling itself on smaller inputs. What additional condition guarantees it can eventually stop?,computer_science/04_race_condition.md,"# Race conditions in shared data
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A race condition occurs when program behavior depends on the relative timing of concurrent operations, often because shared mutable data is accessed without suitable synchronization. A read-modify-write sequence is not necessarily atomic. A mutex can protect a critical section, but only when all relevant accesses follow the locking discipline.",0,Explains race conditions rather than recursive termination.
+H014,computer_science,Thread A owns lock X and waits for Y; thread B owns Y and waits for X. Name the problem and a standard prevention rule.,computer_science/05_deadlock.md,"# Deadlock and lock ordering
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Deadlock can arise when threads hold resources while waiting for other resources in a cycle, so none can proceed. A common prevention technique is acquiring multiple locks in a consistent global order. Mutual exclusion is not identical to deadlock; a correctly designed critical section can use locks without becoming deadlocked.",2,Identifies circular waiting as deadlock and consistent global lock ordering as prevention.
+H018,computer_science,"In a map with unweighted links, a search visits nearby nodes before farther ones. Why does this help discover a route using the fewest links?",computer_science/08_hash_table_collisions.md,"# Hash tables and collisions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A hash table maps keys to locations using a hash function. Distinct keys can map to the same slot, creating a collision; implementations handle collisions with strategies such as chaining or probing. Average-case lookup can be near constant time under suitable assumptions, but worst-case behavior can be slower.",0,"Covers hash collisions, unrelated to level-order graph traversal."
+H006,electronics,A student places an ideal voltmeter directly in the current path to measure current through a lamp. Which part of this setup is confused?,electronics/02_voltage_current.md,"Resistance describes how strongly a component opposes current under specified conditions. For an ohmic resistor, the relationship between voltage V, current I, and resistance R is V = I R.
+
+A voltage reading between two points is not the same thing as the current flowing through a device. A voltmeter connects across the two points; an ammeter is commonly inserted in series with the branch of interest.",2,Explicitly distinguishes a voltmeter across points from an ammeter inserted in series for current.
+H007,electronics,"An appliance uses 12 watts for 10 seconds. How many joules of energy were transferred, assuming constant power?",electronics/11_power_energy.md,"# Electrical power and energy
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Electrical power is the rate at which electrical energy is transferred: P = V × I for a device using the passive sign convention. Energy transferred over a constant interval is E = P × t. Power is measured in watts, energy in joules. A bright lamp can consume more power without implying that electrons are being destroyed.",2,"Provides E = P × t with units, allowing 12 W × 10 s = 120 J."
+H004,electronics,Someone says the battery immediately becomes drained whenever a light switch is turned off. How would you correct them?,electronics/01_closed_circuits.md,"# Closed paths, open circuits, and bulbs
+
+**Concept notes written for the ConceptLens starter demo; not a reference to any BEETLE answer or label.**
+
+A simple battery–wire–bulb circuit lights the bulb when a complete conducting path connects the two battery terminals through the bulb. Current can flow around this closed loop, and the bulb converts electrical energy into light and heat.
+
+Opening a switch creates a gap in a path and interrupts current in that path. The bulb goes out because the conducting loop is broken; the fact that it is dark does not, by itself, mean the battery's stored chemical energy has been exhausted.",2,Explicitly explains that an open switch stops current without demonstrating battery depletion.
+H011,computer_science,A function keeps calling itself on smaller inputs. What additional condition guarantees it can eventually stop?,computer_science/01_threads_mutex.md,"If two threads update the same mutable variable without synchronization, one update can overwrite another. A race condition occurs when the result depends on uncontrolled execution ordering. A mutex allows one thread at a time to enter a protected critical section, provided all participating code follows the locking discipline.
+
+A mutex does not make all programs correct automatically. Locks can introduce deadlocks if acquired inconsistently, and carefully scoped critical sections are important for performance and safety.",0,"Discusses threads and locks, not a recursion stopping condition."
+H013,computer_science,"Two workers each read a shared integer, add one, and write back without coordination. Why could the result lose an increment?",computer_science/05_deadlock.md,"# Deadlock and lock ordering
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Deadlock can arise when threads hold resources while waiting for other resources in a cycle, so none can proceed. A common prevention technique is acquiring multiple locks in a consistent global order. Mutual exclusion is not identical to deadlock; a correctly designed critical section can use locks without becoming deadlocked.",0,"Describes deadlock between locks, not a lost update from concurrent increments."
+H013,computer_science,"Two workers each read a shared integer, add one, and write back without coordination. Why could the result lose an increment?",computer_science/02_recursion.md,"# Recursion and base cases
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A recursive function calls itself directly or indirectly while solving a smaller instance of a problem. A terminating recursive algorithm needs a base case and a progression that eventually reaches the base case.
+
+Without effective progress toward a stopping condition, repeated recursive calls can continue until the call stack is exhausted. The base case is not merely an optimization; it defines when recursion stops and what result is returned.",0,"Discusses recursion, unrelated to concurrent shared-counter updates."
+H015,computer_science,A programmer assumes two threads in one application each have completely separate global memory. Is that generally true?,computer_science/05_deadlock.md,"# Deadlock and lock ordering
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Deadlock can arise when threads hold resources while waiting for other resources in a cycle, so none can proceed. A common prevention technique is acquiring multiple locks in a consistent global order. Mutual exclusion is not identical to deadlock; a correctly designed critical section can use locks without becoming deadlocked.",0,"Explains deadlock, not memory sharing between threads in one process."
+H008,electronics,A circuit drawing shows a node labeled 0 V. Does that label necessarily establish a physical connection to the soil?,electronics/04_short_circuits.md,"Circuit diagrams distinguish components, connection nodes, and switches. When reasoning about a circuit, trace the current path from one source terminal through components and back to the other terminal.",0,"Mentions diagram nodes and current paths, not 0-V ground reference versus Earth connection."
+H007,electronics,"An appliance uses 12 watts for 10 seconds. How many joules of energy were transferred, assuming constant power?",electronics/05_conductors.md,"# Conductors, insulators and charge
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Metals generally conduct because some electrons can move through the material. Insulators resist charge motion under ordinary conditions. Whether a bulb lights depends on both the material in the loop and whether the path is complete.
+
+Electrons are not created by a light bulb, and a lamp does not consume electrons as if they were fuel. Electrical energy supplied by the source is converted to heat and light in the lamp.",0,Mentions energy transfer in a lamp but no power-to-energy calculation.
+H011,computer_science,A function keeps calling itself on smaller inputs. What additional condition guarantees it can eventually stop?,computer_science/07_stack_heap.md,"# Stack and heap memory
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A call stack tracks function activation records, including local execution state and return addresses. Heap memory typically holds dynamically allocated objects whose lifetime need not match a single function call. Neither stack nor heap should be equated with CPU cache. Exact memory placement depends on language and runtime.",1,"Describes the call stack used by functions, but not the base case required to terminate recursion."
+H010,electronics,Someone connects a low-resistance wire around a bulb and says this is identical to breaking the wire. Explain the difference.,electronics/06_resistance_ohms_law.md,"# Resistance and Ohm’s law
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Resistance describes how strongly a component opposes current. For an ohmic component under fixed conditions, voltage, current, and resistance satisfy V = I × R. At the same voltage, greater resistance means less current. This relation does not say that every component has a fixed resistance: a filament lamp changes resistance as it heats.",1,"Explains that lower resistance allows more current, without contrasting a bypass with an open circuit."
+H011,computer_science,A function keeps calling itself on smaller inputs. What additional condition guarantees it can eventually stop?,computer_science/02_recursion.md,"# Recursion and base cases
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A recursive function calls itself directly or indirectly while solving a smaller instance of a problem. A terminating recursive algorithm needs a base case and a progression that eventually reaches the base case.
+
+Without effective progress toward a stopping condition, repeated recursive calls can continue until the call stack is exhausted. The base case is not merely an optimization; it defines when recursion stops and what result is returned.",2,Directly states that a terminating recursion needs a base case and progress toward it.
+H019,computer_science,A classifier memorizes peculiarities of training samples and scores badly on fresh examples. What issue does that suggest?,computer_science/12_data_leakage.md,"# Data leakage in evaluation
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Data leakage happens when information unavailable at real deployment time influences model training or selection. Examples include fitting transformations using test data, copying near-duplicate examples across train and test, or inserting test answer labels into a RAG knowledge base. Keep held-out examples isolated from decisions that tune the system.",1,"Discusses train/test evaluation contamination, but not directly model memorization and poor generalization."
+H009,electronics,There are two separate complete branches with bulbs. A switch disconnects only branch A. Why might bulb B stay on?,electronics/14_switch_positions.md,"# Switches and conducting paths
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An ideal closed switch behaves like a conducting connection; an ideal open switch behaves like a gap. Whether a particular lamp lights depends on which current path the switch controls. In a branched circuit, opening one branch need not disconnect other complete branches.",2,Explicitly states that opening one branch need not interrupt other complete branches.
+H016,computer_science,A dictionary maps two distinct keys to one hash slot. Does that automatically make either key impossible to look up?,computer_science/08_hash_table_collisions.md,"# Hash tables and collisions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A hash table maps keys to locations using a hash function. Distinct keys can map to the same slot, creating a collision; implementations handle collisions with strategies such as chaining or probing. Average-case lookup can be near constant time under suitable assumptions, but worst-case behavior can be slower.",2,Defines a hash collision and explicitly names chaining/probing strategies that preserve lookup.
+H004,electronics,Someone says the battery immediately becomes drained whenever a light switch is turned off. How would you correct them?,electronics/14_switch_positions.md,"# Switches and conducting paths
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An ideal closed switch behaves like a conducting connection; an ideal open switch behaves like a gap. Whether a particular lamp lights depends on which current path the switch controls. In a branched circuit, opening one branch need not disconnect other complete branches.",1,Explains the open switch as a gap but does not address battery energy or discharge.
+H012,computer_science,A learner confuses the stack data structure with the memory call stack. Are their uses necessarily the same?,computer_science/02_recursion.md,"Iteration and recursion can express similar computations. Which is appropriate depends on problem structure, language runtime, readability and resource constraints.",0,"Compares iteration and recursion, but does not distinguish the two meanings of stack."
+H010,electronics,Someone connects a low-resistance wire around a bulb and says this is identical to breaking the wire. Explain the difference.,electronics/05_conductors.md,"# Conductors, insulators and charge
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Metals generally conduct because some electrons can move through the material. Insulators resist charge motion under ordinary conditions. Whether a bulb lights depends on both the material in the loop and whether the path is complete.
+
+Electrons are not created by a light bulb, and a lamp does not consume electrons as if they were fuel. Electrical energy supplied by the source is converted to heat and light in the lamp.",1,Discusses conducting paths and insulation but not low-resistance bypass/short-circuit behavior.
+H004,electronics,Someone says the battery immediately becomes drained whenever a light switch is turned off. How would you correct them?,electronics/07_battery_energy.md,"# Battery voltage, stored energy, and discharge
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A battery converts stored chemical energy into electrical energy delivered to a circuit. Its voltage indicates potential difference, not the number of electrons stored or a fixed amount of current. A discharged battery may not sustain the intended current under load. Opening a switch does not instantly discharge a working battery.",2,Explicitly states that opening a switch does not instantly discharge a working battery.
+H015,computer_science,A programmer assumes two threads in one application each have completely separate global memory. Is that generally true?,computer_science/04_race_condition.md,"# Race conditions in shared data
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A race condition occurs when program behavior depends on the relative timing of concurrent operations, often because shared mutable data is accessed without suitable synchronization. A read-modify-write sequence is not necessarily atomic. A mutex can protect a critical section, but only when all relevant accesses follow the locking discipline.",1,"Describes shared mutable data in concurrent operations, implying possible shared-memory access."
+H002,electronics,"Two parallel lamps sit across the same source, but one has more resistance. A classmate insists their currents must be equal. Is that right?",electronics/06_resistance_ohms_law.md,"# Resistance and Ohm’s law
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Resistance describes how strongly a component opposes current. For an ohmic component under fixed conditions, voltage, current, and resistance satisfy V = I × R. At the same voltage, greater resistance means less current. This relation does not say that every component has a fixed resistance: a filament lamp changes resistance as it heats.",2,Ohm’s law directly shows higher resistance draws less current at a fixed voltage.
+H009,electronics,There are two separate complete branches with bulbs. A switch disconnects only branch A. Why might bulb B stay on?,electronics/03_series_parallel.md,"# Series and parallel circuits
+
+**Concept notes written for the ConceptLens starter demo.**
+
+In a single-loop series circuit, all components lie on one path. The same current flows through each component in that loop under steady-state conditions. If one component breaks the loop, current stops throughout the loop.
+
+In parallel circuits, branches provide separate conductive paths between common connection points. Opening one branch can stop current there while other complete branches continue to carry current. The same voltage appears across ideal parallel branches sharing the same pair of nodes.",2,Explains independent parallel paths and why other intact branches can keep carrying current.
+H020,computer_science,A chatbot cites a retrieved document but makes a statement that document never supports. Has retrieval eliminated the risk of fabrication?,computer_science/13_embeddings.md,"# Sentence embeddings and semantic search
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A sentence embedding is a numeric vector representing aspects of text meaning. Vector retrieval compares query and passage embeddings to find related content even when they use different words. Similarity is not a proof of factual correctness, and a nearest neighbor can still be irrelevant.",1,"Says similarity is not proof of factual correctness, but does not directly address unsupported generated claims."
+H009,electronics,There are two separate complete branches with bulbs. A switch disconnects only branch A. Why might bulb B stay on?,electronics/01_closed_circuits.md,"# Closed paths, open circuits, and bulbs
+
+**Concept notes written for the ConceptLens starter demo; not a reference to any BEETLE answer or label.**
+
+A simple battery–wire–bulb circuit lights the bulb when a complete conducting path connects the two battery terminals through the bulb. Current can flow around this closed loop, and the bulb converts electrical energy into light and heat.
+
+Opening a switch creates a gap in a path and interrupts current in that path. The bulb goes out because the conducting loop is broken; the fact that it is dark does not, by itself, mean the battery's stored chemical energy has been exhausted.",1,"Explains closed paths and open switches, but only for a simple loop rather than parallel branches."
+H019,computer_science,A classifier memorizes peculiarities of training samples and scores badly on fresh examples. What issue does that suggest?,computer_science/14_rag_grounding.md,"# Retrieval-augmented generation and grounding
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Retrieval-augmented generation first selects external passages and then supplies them to a generator as context. This can make an answer more grounded and traceable, but retrieval errors and hallucinations remain possible. Evaluate retrieval separately from generation and verify claims against returned evidence.",0,Describes RAG grounding rather than the model learning training-specific patterns.
+H019,computer_science,A classifier memorizes peculiarities of training samples and scores badly on fresh examples. What issue does that suggest?,computer_science/11_overfitting.md,"# Overfitting and generalization
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Overfitting occurs when a model learns training-specific noise or patterns that do not generalize to unseen examples. High training accuracy with poor held-out performance is a warning sign. Regularization, appropriate data splits, and simpler models can reduce risk, but no single metric establishes generalization by itself.",2,Defines overfitting as training-specific learning with poor unseen-example performance.
+H012,computer_science,A learner confuses the stack data structure with the memory call stack. Are their uses necessarily the same?,computer_science/07_stack_heap.md,"# Stack and heap memory
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A call stack tracks function activation records, including local execution state and return addresses. Heap memory typically holds dynamically allocated objects whose lifetime need not match a single function call. Neither stack nor heap should be equated with CPU cache. Exact memory placement depends on language and runtime.",1,Defines a memory call stack but not a stack as an abstract data structure.
+H020,computer_science,A chatbot cites a retrieved document but makes a statement that document never supports. Has retrieval eliminated the risk of fabrication?,computer_science/12_data_leakage.md,"# Data leakage in evaluation
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Data leakage happens when information unavailable at real deployment time influences model training or selection. Examples include fitting transformations using test data, copying near-duplicate examples across train and test, or inserting test answer labels into a RAG knowledge base. Keep held-out examples isolated from decisions that tune the system.",0,"Explains data leakage, not hallucinated claims despite citations."
+H013,computer_science,"Two workers each read a shared integer, add one, and write back without coordination. Why could the result lose an increment?",computer_science/01_threads_mutex.md,"# Threads, shared state and mutual exclusion
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Threads are independent sequences of execution within a process. An operating system can interleave their instructions, and multiple cores can execute threads in parallel. Therefore one cannot assume two threads always take turns in a safe order.",1,"Notes that thread instructions can interleave unsafely, but not specifically lost read–modify–write updates."
+H006,electronics,A student places an ideal voltmeter directly in the current path to measure current through a lamp. Which part of this setup is confused?,electronics/14_switch_positions.md,"# Switches and conducting paths
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An ideal closed switch behaves like a conducting connection; an ideal open switch behaves like a gap. Whether a particular lamp lights depends on which current path the switch controls. In a branched circuit, opening one branch need not disconnect other complete branches.",0,"Explains switch positions and conducting paths, not meter type or connection."
+H014,computer_science,Thread A owns lock X and waits for Y; thread B owns Y and waits for X. Name the problem and a standard prevention rule.,computer_science/02_recursion.md,"# Recursion and base cases
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A recursive function calls itself directly or indirectly while solving a smaller instance of a problem. A terminating recursive algorithm needs a base case and a progression that eventually reaches the base case.
+
+Without effective progress toward a stopping condition, repeated recursive calls can continue until the call stack is exhausted. The base case is not merely an optimization; it defines when recursion stops and what result is returned.",0,"Discusses recursion and base cases, unrelated to lock-cycle deadlock."
+H016,computer_science,A dictionary maps two distinct keys to one hash slot. Does that automatically make either key impossible to look up?,computer_science/03_data_structures.md,"# Data structures and algorithmic tradeoffs
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A hash table typically supports expected constant-time lookup by key under appropriate assumptions, but collisions, resizing, and adversarial inputs can affect performance. Binary search on a sorted array uses O(log n) comparisons but requires sorted data.
+
+A stack follows last-in, first-out order; a queue follows first-in, first-out. A linked list can insert a node efficiently when the insertion position is already known, but locating an arbitrary element generally requires traversal.",1,Mentions collisions can affect performance but does not explain how collided keys remain retrievable.
+H017,computer_science,A classmate wants to repeatedly halve an unsorted list to find a target. What hidden assumption makes that unreliable?,computer_science/09_binary_search.md,"# Binary search preconditions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Binary search narrows a search interval by comparing the target with an element near its middle. It requires data ordered consistently with the comparison being used. On a sorted array, lookup takes logarithmic comparisons in the worst case; applying it to arbitrary unsorted data can miss an item.",2,Explicitly states binary search requires consistent ordering and can miss an item in unsorted data.
+H014,computer_science,Thread A owns lock X and waits for Y; thread B owns Y and waits for X. Name the problem and a standard prevention rule.,computer_science/04_race_condition.md,"# Race conditions in shared data
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A race condition occurs when program behavior depends on the relative timing of concurrent operations, often because shared mutable data is accessed without suitable synchronization. A read-modify-write sequence is not necessarily atomic. A mutex can protect a critical section, but only when all relevant accesses follow the locking discipline.",1,"Discusses mutex protection, but not cyclic waiting or the standard global lock-order rule."
+H012,computer_science,A learner confuses the stack data structure with the memory call stack. Are their uses necessarily the same?,computer_science/06_process_vs_thread.md,"# Processes versus threads
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A process normally has its own virtual address space and operating-system resources. Threads within a process share much of that address space but have separate execution state such as stacks and registers. Shared memory makes communication efficient but introduces synchronization risks.",1,"Mentions that threads have separate stacks, but not the abstract stack data structure."
+H008,electronics,A circuit drawing shows a node labeled 0 V. Does that label necessarily establish a physical connection to the soil?,electronics/12_meters.md,"# Ammeter and voltmeter connections
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An ammeter measures current through a branch and is normally connected in series with that branch; an ideal ammeter has negligible resistance. A voltmeter measures potential difference between two points and is connected in parallel across the component; an ideal voltmeter has very high resistance. Incorrect meter connections can disturb the circuit.",0,Discusses ammeters and voltmeters rather than grounding conventions.
+H006,electronics,A student places an ideal voltmeter directly in the current path to measure current through a lamp. Which part of this setup is confused?,electronics/12_meters.md,"# Ammeter and voltmeter connections
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An ammeter measures current through a branch and is normally connected in series with that branch; an ideal ammeter has negligible resistance. A voltmeter measures potential difference between two points and is connected in parallel across the component; an ideal voltmeter has very high resistance. Incorrect meter connections can disturb the circuit.",2,Explains that a voltmeter measures voltage in parallel while an ammeter measures current in series.
+H018,computer_science,"In a map with unweighted links, a search visits nearby nodes before farther ones. Why does this help discover a route using the fewest links?",computer_science/10_bfs_dfs.md,"# Breadth-first versus depth-first search
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Breadth-first search explores a graph level by level and can find a minimum-edge path in an unweighted graph. Depth-first search follows a path deeply before backtracking; it does not generally guarantee a shortest path. Both require handling previously visited vertices to avoid repeated cycles.",2,Explains BFS level-by-level exploration and shortest paths in unweighted graphs.
+H003,electronics,"At a junction, 0.8 A enters and one exit branch carries 0.3 A. What should the other exit branch carry in steady state, and why?",electronics/03_series_parallel.md,"# Series and parallel circuits
+
+**Concept notes written for the ConceptLens starter demo.**
+
+In a single-loop series circuit, all components lie on one path. The same current flows through each component in that loop under steady-state conditions. If one component breaks the loop, current stops throughout the loop.
+
+In parallel circuits, branches provide separate conductive paths between common connection points. Opening one branch can stop current there while other complete branches continue to carry current. The same voltage appears across ideal parallel branches sharing the same pair of nodes.",1,"Describes parallel branches, but not current conservation or the numerical split."
+H010,electronics,Someone connects a low-resistance wire around a bulb and says this is identical to breaking the wire. Explain the difference.,electronics/03_series_parallel.md,"Do not conclude that every bulb must go out when any bulb fails: the effect depends on whether the circuit is series or parallel, and where the break occurs. Understanding which paths remain closed is more reliable than memorizing a slogan.",0,"Addresses bulb failure and series/parallel layout, not bypass versus broken wire."
+H020,computer_science,A chatbot cites a retrieved document but makes a statement that document never supports. Has retrieval eliminated the risk of fabrication?,computer_science/03_data_structures.md,"# Data structures and algorithmic tradeoffs
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A hash table typically supports expected constant-time lookup by key under appropriate assumptions, but collisions, resizing, and adversarial inputs can affect performance. Binary search on a sorted array uses O(log n) comparisons but requires sorted data.
+
+A stack follows last-in, first-out order; a queue follows first-in, first-out. A linked list can insert a node efficiently when the insertion position is already known, but locating an arbitrary element generally requires traversal.",0,"Discusses data structures and lookup, unrelated to grounded generation."
+H007,electronics,"An appliance uses 12 watts for 10 seconds. How many joules of energy were transferred, assuming constant power?",electronics/02_voltage_current.md,"# Voltage, current, battery and resistance
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Voltage is electric potential difference between two points, measured in volts. A battery uses chemical reactions to maintain an electrical potential difference between its terminals.
+
+Electric current is the rate of flow of electric charge, measured in amperes. Current through a component requires a conducting path and a driving potential difference. Charge is not normally used up at a component; energy is transferred.",0,Defines electric current and voltage without the power–time energy relationship.
+H003,electronics,"At a junction, 0.8 A enters and one exit branch carries 0.3 A. What should the other exit branch carry in steady state, and why?",electronics/09_voltage_parallel.md,"# Voltage across parallel branches
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Components connected between the same two circuit nodes have the same voltage across them. In a simple parallel circuit, each complete branch sees the source terminal voltage, aside from nonideal effects. Identical voltage does not imply identical current, because branch resistances may differ.",0,"Addresses parallel voltage and branch resistance, not conservation of current at a junction."
+H020,computer_science,A chatbot cites a retrieved document but makes a statement that document never supports. Has retrieval eliminated the risk of fabrication?,computer_science/14_rag_grounding.md,"# Retrieval-augmented generation and grounding
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Retrieval-augmented generation first selects external passages and then supplies them to a generator as context. This can make an answer more grounded and traceable, but retrieval errors and hallucinations remain possible. Evaluate retrieval separately from generation and verify claims against returned evidence.",2,Explicitly states RAG can still hallucinate and generated claims require evidence verification.
+H001,electronics,A student adds a second resistor to the same unbranched loop. The battery voltage stays constant. Should the total current go up or down?,electronics/15_resistors_series.md,"# Equivalent resistance in series
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+For ideal resistors in series, equivalent resistance is the sum of their resistances. Adding series resistance to a fixed-voltage circuit generally reduces total current. This does not mean that current is progressively consumed as it passes each resistor.",2,States that adding series resistance at fixed voltage reduces total current.
+H003,electronics,"At a junction, 0.8 A enters and one exit branch carries 0.3 A. What should the other exit branch carry in steady state, and why?",electronics/08_current_conservation.md,"# Current conservation at junctions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Charge does not disappear at a circuit junction. In steady state, total current entering a junction equals total current leaving it. In parallel branches current divides according to electrical properties; current is not necessarily split equally. This rule concerns current, not equal voltage everywhere.",2,"States junction current conservation, permitting 0.8 − 0.3 = 0.5 A in the second branch."
+H003,electronics,"At a junction, 0.8 A enters and one exit branch carries 0.3 A. What should the other exit branch carry in steady state, and why?",electronics/10_series_current.md,"# Current in a series circuit
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A series path contains components along one unbranched conducting route. In steady operation, the same current flows through each component along that route. The source voltage is divided across components, with larger resistance typically taking a larger voltage drop for ohmic resistors. A break anywhere in the sole series path stops current through every series component.",0,"Explains unbranched series current, not current division at a junction."
+H018,computer_science,"In a map with unweighted links, a search visits nearby nodes before farther ones. Why does this help discover a route using the fewest links?",computer_science/03_data_structures.md,"# Data structures and algorithmic tradeoffs
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A hash table typically supports expected constant-time lookup by key under appropriate assumptions, but collisions, resizing, and adversarial inputs can affect performance. Binary search on a sorted array uses O(log n) comparisons but requires sorted data.
+
+A stack follows last-in, first-out order; a queue follows first-in, first-out. A linked list can insert a node efficiently when the insertion position is already known, but locating an arbitrary element generally requires traversal.",0,Mentions LIFO/FIFO collections but does not explain BFS or fewest-edge paths.
+H008,electronics,A circuit drawing shows a node labeled 0 V. Does that label necessarily establish a physical connection to the soil?,electronics/08_current_conservation.md,"# Current conservation at junctions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Charge does not disappear at a circuit junction. In steady state, total current entering a junction equals total current leaving it. In parallel branches current divides according to electrical properties; current is not necessarily split equally. This rule concerns current, not equal voltage everywhere.",0,"Describes current conservation, not reference-node grounding."
+H010,electronics,Someone connects a low-resistance wire around a bulb and says this is identical to breaking the wire. Explain the difference.,electronics/01_closed_circuits.md,"# Closed paths, open circuits, and bulbs
+
+**Concept notes written for the ConceptLens starter demo; not a reference to any BEETLE answer or label.**
+
+A simple battery–wire–bulb circuit lights the bulb when a complete conducting path connects the two battery terminals through the bulb. Current can flow around this closed loop, and the bulb converts electrical energy into light and heat.
+
+Opening a switch creates a gap in a path and interrupts current in that path. The bulb goes out because the conducting loop is broken; the fact that it is dark does not, by itself, mean the battery's stored chemical energy has been exhausted.",1,"Explains that breaking the conducting loop interrupts current, but not what a bypass wire does."
+H016,computer_science,A dictionary maps two distinct keys to one hash slot. Does that automatically make either key impossible to look up?,computer_science/09_binary_search.md,"# Binary search preconditions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Binary search narrows a search interval by comparing the target with an element near its middle. It requires data ordered consistently with the comparison being used. On a sorted array, lookup takes logarithmic comparisons in the worst case; applying it to arbitrary unsorted data can miss an item.",0,"Explains binary search on sorted data, unrelated to hash-slot collisions."
+H017,computer_science,A classmate wants to repeatedly halve an unsorted list to find a target. What hidden assumption makes that unreliable?,computer_science/08_hash_table_collisions.md,"# Hash tables and collisions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A hash table maps keys to locations using a hash function. Distinct keys can map to the same slot, creating a collision; implementations handle collisions with strategies such as chaining or probing. Average-case lookup can be near constant time under suitable assumptions, but worst-case behavior can be slower.",0,"Discusses hash table collisions, not the precondition for binary search."
+H005,electronics,"Two lamps are on one path. If the filament of either lamp breaks, what happens to current through the other lamp?",electronics/05_conductors.md,"# Conductors, insulators and charge
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Metals generally conduct because some electrons can move through the material. Insulators resist charge motion under ordinary conditions. Whether a bulb lights depends on both the material in the loop and whether the path is complete.
+
+Electrons are not created by a light bulb, and a lamp does not consume electrons as if they were fuel. Electrical energy supplied by the source is converted to heat and light in the lamp.",1,"Says lamp operation requires a complete path, but not explicitly that a break stops series current."
+H018,computer_science,"In a map with unweighted links, a search visits nearby nodes before farther ones. Why does this help discover a route using the fewest links?",computer_science/09_binary_search.md,"# Binary search preconditions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Binary search narrows a search interval by comparing the target with an element near its middle. It requires data ordered consistently with the comparison being used. On a sorted array, lookup takes logarithmic comparisons in the worst case; applying it to arbitrary unsorted data can miss an item.",0,"Explains binary search in ordered arrays, not graph traversal."
+H007,electronics,"An appliance uses 12 watts for 10 seconds. How many joules of energy were transferred, assuming constant power?",electronics/06_resistance_ohms_law.md,"# Resistance and Ohm’s law
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Resistance describes how strongly a component opposes current. For an ohmic component under fixed conditions, voltage, current, and resistance satisfy V = I × R. At the same voltage, greater resistance means less current. This relation does not say that every component has a fixed resistance: a filament lamp changes resistance as it heats.",0,"Provides Ohm’s law, not energy from power and elapsed time."
+H002,electronics,"Two parallel lamps sit across the same source, but one has more resistance. A classmate insists their currents must be equal. Is that right?",electronics/03_series_parallel.md,"# Series and parallel circuits
+
+**Concept notes written for the ConceptLens starter demo.**
+
+In a single-loop series circuit, all components lie on one path. The same current flows through each component in that loop under steady-state conditions. If one component breaks the loop, current stops throughout the loop.
+
+In parallel circuits, branches provide separate conductive paths between common connection points. Opening one branch can stop current there while other complete branches continue to carry current. The same voltage appears across ideal parallel branches sharing the same pair of nodes.",1,"Establishes that parallel branches share voltage, without comparing branch currents."
+H013,computer_science,"Two workers each read a shared integer, add one, and write back without coordination. Why could the result lose an increment?",computer_science/04_race_condition.md,"# Race conditions in shared data
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A race condition occurs when program behavior depends on the relative timing of concurrent operations, often because shared mutable data is accessed without suitable synchronization. A read-modify-write sequence is not necessarily atomic. A mutex can protect a critical section, but only when all relevant accesses follow the locking discipline.",2,"States that shared read–modify–write is not necessarily atomic, explaining lost increments."
+H009,electronics,There are two separate complete branches with bulbs. A switch disconnects only branch A. Why might bulb B stay on?,electronics/03_series_parallel.md,"Do not conclude that every bulb must go out when any bulb fails: the effect depends on whether the circuit is series or parallel, and where the break occurs. Understanding which paths remain closed is more reliable than memorizing a slogan.",1,"Notes that branch failures depend on circuit topology, without explicitly describing the other branch’s current."
+H003,electronics,"At a junction, 0.8 A enters and one exit branch carries 0.3 A. What should the other exit branch carry in steady state, and why?",electronics/14_switch_positions.md,"# Switches and conducting paths
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An ideal closed switch behaves like a conducting connection; an ideal open switch behaves like a gap. Whether a particular lamp lights depends on which current path the switch controls. In a branched circuit, opening one branch need not disconnect other complete branches.",0,"Discusses switch-controlled paths, not how to calculate branch currents."
+H015,computer_science,A programmer assumes two threads in one application each have completely separate global memory. Is that generally true?,computer_science/01_threads_mutex.md,"# Threads, shared state and mutual exclusion
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Threads are independent sequences of execution within a process. An operating system can interleave their instructions, and multiple cores can execute threads in parallel. Therefore one cannot assume two threads always take turns in a safe order.",1,"Identifies threads as executions within one process, without stating their shared address space."
+H017,computer_science,A classmate wants to repeatedly halve an unsorted list to find a target. What hidden assumption makes that unreliable?,computer_science/03_data_structures.md,"# Data structures and algorithmic tradeoffs
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A hash table typically supports expected constant-time lookup by key under appropriate assumptions, but collisions, resizing, and adversarial inputs can affect performance. Binary search on a sorted array uses O(log n) comparisons but requires sorted data.
+
+A stack follows last-in, first-out order; a queue follows first-in, first-out. A linked list can insert a node efficiently when the insertion position is already known, but locating an arbitrary element generally requires traversal.",2,States that binary search requires sorted data; directly supplies the missing assumption.
+H005,electronics,"Two lamps are on one path. If the filament of either lamp breaks, what happens to current through the other lamp?",electronics/06_resistance_ohms_law.md,"# Resistance and Ohm’s law
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Resistance describes how strongly a component opposes current. For an ohmic component under fixed conditions, voltage, current, and resistance satisfy V = I × R. At the same voltage, greater resistance means less current. This relation does not say that every component has a fixed resistance: a filament lamp changes resistance as it heats.",0,"Covers resistance and filament heating, not the effect of an open filament in a series circuit."
+H002,electronics,"Two parallel lamps sit across the same source, but one has more resistance. A classmate insists their currents must be equal. Is that right?",electronics/16_resistors_parallel.md,"# Equivalent resistance in parallel
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+For ideal resistors in parallel, reciprocal equivalent resistance equals the sum of reciprocal branch resistances. Adding another parallel branch reduces equivalent resistance across the same nodes and can increase total current drawn from a fixed-voltage source. Each existing ideal branch still has the same applied voltage.",1,Explains parallel branches share voltage but not how different resistances affect their currents.
+H012,computer_science,A learner confuses the stack data structure with the memory call stack. Are their uses necessarily the same?,computer_science/03_data_structures.md,"# Data structures and algorithmic tradeoffs
+
+**Concept notes written for the ConceptLens starter demo.**
+
+A hash table typically supports expected constant-time lookup by key under appropriate assumptions, but collisions, resizing, and adversarial inputs can affect performance. Binary search on a sorted array uses O(log n) comparisons but requires sorted data.
+
+A stack follows last-in, first-out order; a queue follows first-in, first-out. A linked list can insert a node efficiently when the insertion position is already known, but locating an arbitrary element generally requires traversal.",1,Defines an abstract LIFO stack but does not compare its role to the call stack.
+H005,electronics,"Two lamps are on one path. If the filament of either lamp breaks, what happens to current through the other lamp?",electronics/03_series_parallel.md,"Do not conclude that every bulb must go out when any bulb fails: the effect depends on whether the circuit is series or parallel, and where the break occurs. Understanding which paths remain closed is more reliable than memorizing a slogan.",1,"Warns that failure effects depend on series versus parallel topology, without stating the series-current outcome."
+H006,electronics,A student places an ideal voltmeter directly in the current path to measure current through a lamp. Which part of this setup is confused?,electronics/05_conductors.md,"# Conductors, insulators and charge
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Metals generally conduct because some electrons can move through the material. Insulators resist charge motion under ordinary conditions. Whether a bulb lights depends on both the material in the loop and whether the path is complete.
+
+Electrons are not created by a light bulb, and a lamp does not consume electrons as if they were fuel. Electrical energy supplied by the source is converted to heat and light in the lamp.",0,"Discusses conducting materials and lamps, not proper measuring instrument connections."
+H001,electronics,A student adds a second resistor to the same unbranched loop. The battery voltage stays constant. Should the total current go up or down?,electronics/08_current_conservation.md,"# Current conservation at junctions
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Charge does not disappear at a circuit junction. In steady state, total current entering a junction equals total current leaving it. In parallel branches current divides according to electrical properties; current is not necessarily split equally. This rule concerns current, not equal voltage everywhere.",0,"Discusses junction current conservation, not the effect of adding series resistance."
+H002,electronics,"Two parallel lamps sit across the same source, but one has more resistance. A classmate insists their currents must be equal. Is that right?",electronics/09_voltage_parallel.md,"# Voltage across parallel branches
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Components connected between the same two circuit nodes have the same voltage across them. In a simple parallel circuit, each complete branch sees the source terminal voltage, aside from nonideal effects. Identical voltage does not imply identical current, because branch resistances may differ.",2,Explicitly states equal parallel-branch voltage need not mean equal current when resistances differ.
+H001,electronics,A student adds a second resistor to the same unbranched loop. The battery voltage stays constant. Should the total current go up or down?,electronics/02_voltage_current.md,"# Voltage, current, battery and resistance
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Voltage is electric potential difference between two points, measured in volts. A battery uses chemical reactions to maintain an electrical potential difference between its terminals.
+
+Electric current is the rate of flow of electric charge, measured in amperes. Current through a component requires a conducting path and a driving potential difference. Charge is not normally used up at a component; energy is transferred.",1,Defines voltage and current but does not relate added series resistance to current.
+H008,electronics,A circuit drawing shows a node labeled 0 V. Does that label necessarily establish a physical connection to the soil?,electronics/13_ground_reference.md,"# Ground and voltage reference
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+Voltage is a difference in electric potential between two points, never a stand-alone absolute quantity. A ground symbol may define the chosen zero-volt reference for analysis; it does not guarantee that current has an available return path. Protective earth grounding is a separate safety concept from the abstract circuit reference node.",2,Explicitly separates a chosen zero-volt reference node from protective Earth grounding.
+H016,computer_science,A dictionary maps two distinct keys to one hash slot. Does that automatically make either key impossible to look up?,computer_science/01_threads_mutex.md,"If two threads update the same mutable variable without synchronization, one update can overwrite another. A race condition occurs when the result depends on uncontrolled execution ordering. A mutex allows one thread at a time to enter a protected critical section, provided all participating code follows the locking discipline.
+
+A mutex does not make all programs correct automatically. Locks can introduce deadlocks if acquired inconsistently, and carefully scoped critical sections are important for performance and safety.",0,"Discusses concurrent updates and mutexes, not hash table collision resolution."
+H015,computer_science,A programmer assumes two threads in one application each have completely separate global memory. Is that generally true?,computer_science/06_process_vs_thread.md,"# Processes versus threads
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+A process normally has its own virtual address space and operating-system resources. Threads within a process share much of that address space but have separate execution state such as stacks and registers. Shared memory makes communication efficient but introduces synchronization risks.",2,Explicitly states threads within a process share much of its address space.
+H001,electronics,A student adds a second resistor to the same unbranched loop. The battery voltage stays constant. Should the total current go up or down?,electronics/03_series_parallel.md,"# Series and parallel circuits
+
+**Concept notes written for the ConceptLens starter demo.**
+
+In a single-loop series circuit, all components lie on one path. The same current flows through each component in that loop under steady-state conditions. If one component breaks the loop, current stops throughout the loop.
+
+In parallel circuits, branches provide separate conductive paths between common connection points. Opening one branch can stop current there while other complete branches continue to carry current. The same voltage appears across ideal parallel branches sharing the same pair of nodes.",1,Identifies a single-loop series circuit but does not explain the resistance/current change.
+H014,computer_science,Thread A owns lock X and waits for Y; thread B owns Y and waits for X. Name the problem and a standard prevention rule.,computer_science/01_threads_mutex.md,"# Threads, shared state and mutual exclusion
+
+**Concept notes written for the ConceptLens starter demo.**
+
+Threads are independent sequences of execution within a process. An operating system can interleave their instructions, and multiple cores can execute threads in parallel. Therefore one cannot assume two threads always take turns in a safe order.",0,Describes thread scheduling rather than circular lock waits or prevention.
+H005,electronics,"Two lamps are on one path. If the filament of either lamp breaks, what happens to current through the other lamp?",electronics/14_switch_positions.md,"# Switches and conducting paths
+
+**ConceptLens original teaching note; demonstration content, not a vetted textbook extract.**
+
+An ideal closed switch behaves like a conducting connection; an ideal open switch behaves like a gap. Whether a particular lamp lights depends on which current path the switch controls. In a branched circuit, opening one branch need not disconnect other complete branches.",1,"Defines an open switch as a gap, indirectly supporting a broken path but not explaining the series-lamp case."

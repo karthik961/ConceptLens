@@ -1,0 +1,720 @@
+{
+  "description": "Human-reviewed held-out retrieval evaluation; candidate pool includes only top-3 outputs of the compared models",
+  "questions_sha256": "4ac0ab4054e1de49600b0126e926a61f01306fbc0340a38aacaabb15501ffde3",
+  "limitations": [
+    "20 project-authored questions; limited power to establish generalization",
+    "All judgments cover pooled top-3 passages, not the full corpus",
+    "Hit@3 rather than exhaustive Recall@3",
+    "No model changes after inspecting held-out outputs"
+  ],
+  "models": {
+    "semantic": {
+      "n": 20,
+      "hit_at_3": 0.85,
+      "mrr_at_3": 0.8166666666666667,
+      "precision_at_3": 0.35,
+      "mean_retrieval_latency_ms": 8.871581347193569,
+      "misses": [
+        "H005",
+        "H010",
+        "H012"
+      ],
+      "per_case": [
+        {
+          "id": "H001",
+          "grades": [
+            1,
+            0,
+            2
+          ],
+          "sources": [
+            "electronics/03_series_parallel.md",
+            "electronics/08_current_conservation.md",
+            "electronics/15_resistors_series.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 0.3333333333333333,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 100.47491686418653
+        },
+        {
+          "id": "H002",
+          "grades": [
+            2,
+            1,
+            2
+          ],
+          "sources": [
+            "electronics/06_resistance_ohms_law.md",
+            "electronics/16_resistors_parallel.md",
+            "electronics/09_voltage_parallel.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.6666666666666666,
+          "latency_ms": 4.939209204167128
+        },
+        {
+          "id": "H003",
+          "grades": [
+            2,
+            0,
+            0
+          ],
+          "sources": [
+            "electronics/08_current_conservation.md",
+            "electronics/10_series_current.md",
+            "electronics/14_switch_positions.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 4.4736668933182955
+        },
+        {
+          "id": "H004",
+          "grades": [
+            2,
+            2,
+            1
+          ],
+          "sources": [
+            "electronics/01_closed_circuits.md",
+            "electronics/07_battery_energy.md",
+            "electronics/14_switch_positions.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.6666666666666666,
+          "latency_ms": 4.20437497086823
+        },
+        {
+          "id": "H005",
+          "grades": [
+            1,
+            1,
+            1
+          ],
+          "sources": [
+            "electronics/03_series_parallel.md",
+            "electronics/05_conductors.md",
+            "electronics/14_switch_positions.md"
+          ],
+          "hit_at_3": 0,
+          "mrr_at_3": 0.0,
+          "precision_at_3": 0.0,
+          "latency_ms": 3.6961669102311134
+        },
+        {
+          "id": "H006",
+          "grades": [
+            2,
+            0,
+            2
+          ],
+          "sources": [
+            "electronics/12_meters.md",
+            "electronics/05_conductors.md",
+            "electronics/02_voltage_current.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.6666666666666666,
+          "latency_ms": 4.143709084019065
+        },
+        {
+          "id": "H007",
+          "grades": [
+            2,
+            0,
+            0
+          ],
+          "sources": [
+            "electronics/11_power_energy.md",
+            "electronics/06_resistance_ohms_law.md",
+            "electronics/05_conductors.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 4.144791979342699
+        },
+        {
+          "id": "H008",
+          "grades": [
+            2,
+            0,
+            0
+          ],
+          "sources": [
+            "electronics/13_ground_reference.md",
+            "electronics/04_short_circuits.md",
+            "electronics/12_meters.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 4.140208009630442
+        },
+        {
+          "id": "H009",
+          "grades": [
+            2,
+            1,
+            1
+          ],
+          "sources": [
+            "electronics/14_switch_positions.md",
+            "electronics/01_closed_circuits.md",
+            "electronics/03_series_parallel.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 4.151707980781794
+        },
+        {
+          "id": "H010",
+          "grades": [
+            0,
+            1,
+            1
+          ],
+          "sources": [
+            "electronics/03_series_parallel.md",
+            "electronics/06_resistance_ohms_law.md",
+            "electronics/05_conductors.md"
+          ],
+          "hit_at_3": 0,
+          "mrr_at_3": 0.0,
+          "precision_at_3": 0.0,
+          "latency_ms": 3.836542135104537
+        },
+        {
+          "id": "H011",
+          "grades": [
+            2,
+            0,
+            0
+          ],
+          "sources": [
+            "computer_science/02_recursion.md",
+            "computer_science/04_race_condition.md",
+            "computer_science/01_threads_mutex.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 4.178249975666404
+        },
+        {
+          "id": "H012",
+          "grades": [
+            1,
+            1,
+            0
+          ],
+          "sources": [
+            "computer_science/07_stack_heap.md",
+            "computer_science/06_process_vs_thread.md",
+            "computer_science/02_recursion.md"
+          ],
+          "hit_at_3": 0,
+          "mrr_at_3": 0.0,
+          "precision_at_3": 0.0,
+          "latency_ms": 3.823749953880906
+        },
+        {
+          "id": "H013",
+          "grades": [
+            2,
+            1,
+            0
+          ],
+          "sources": [
+            "computer_science/04_race_condition.md",
+            "computer_science/01_threads_mutex.md",
+            "computer_science/05_deadlock.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 3.8250000216066837
+        },
+        {
+          "id": "H014",
+          "grades": [
+            2,
+            0,
+            1
+          ],
+          "sources": [
+            "computer_science/05_deadlock.md",
+            "computer_science/01_threads_mutex.md",
+            "computer_science/04_race_condition.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 3.621750045567751
+        },
+        {
+          "id": "H015",
+          "grades": [
+            2,
+            1,
+            1
+          ],
+          "sources": [
+            "computer_science/06_process_vs_thread.md",
+            "computer_science/01_threads_mutex.md",
+            "computer_science/04_race_condition.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 3.4850831143558025
+        },
+        {
+          "id": "H016",
+          "grades": [
+            2,
+            1,
+            0
+          ],
+          "sources": [
+            "computer_science/08_hash_table_collisions.md",
+            "computer_science/03_data_structures.md",
+            "computer_science/09_binary_search.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 3.682082984596491
+        },
+        {
+          "id": "H017",
+          "grades": [
+            2,
+            2,
+            0
+          ],
+          "sources": [
+            "computer_science/09_binary_search.md",
+            "computer_science/03_data_structures.md",
+            "computer_science/08_hash_table_collisions.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.6666666666666666,
+          "latency_ms": 3.857832867652178
+        },
+        {
+          "id": "H018",
+          "grades": [
+            2,
+            0,
+            0
+          ],
+          "sources": [
+            "computer_science/10_bfs_dfs.md",
+            "computer_science/09_binary_search.md",
+            "computer_science/03_data_structures.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 4.5993749517947435
+        },
+        {
+          "id": "H019",
+          "grades": [
+            2,
+            1,
+            0
+          ],
+          "sources": [
+            "computer_science/11_overfitting.md",
+            "computer_science/12_data_leakage.md",
+            "computer_science/14_rag_grounding.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 4.126708954572678
+        },
+        {
+          "id": "H020",
+          "grades": [
+            2,
+            1,
+            0
+          ],
+          "sources": [
+            "computer_science/14_rag_grounding.md",
+            "computer_science/13_embeddings.md",
+            "computer_science/12_data_leakage.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 4.026500042527914
+        }
+      ]
+    },
+    "hybrid": {
+      "n": 20,
+      "hit_at_3": 0.85,
+      "mrr_at_3": 0.8,
+      "precision_at_3": 0.3333333333333333,
+      "mean_retrieval_latency_ms": 6.0659353621304035,
+      "misses": [
+        "H005",
+        "H010",
+        "H012"
+      ],
+      "per_case": [
+        {
+          "id": "H001",
+          "grades": [
+            1,
+            2,
+            1
+          ],
+          "sources": [
+            "electronics/03_series_parallel.md",
+            "electronics/15_resistors_series.md",
+            "electronics/02_voltage_current.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 0.5,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 7.826292188838124
+        },
+        {
+          "id": "H002",
+          "grades": [
+            1,
+            2,
+            1
+          ],
+          "sources": [
+            "electronics/16_resistors_parallel.md",
+            "electronics/09_voltage_parallel.md",
+            "electronics/03_series_parallel.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 0.5,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 7.373790955170989
+        },
+        {
+          "id": "H003",
+          "grades": [
+            2,
+            1,
+            0
+          ],
+          "sources": [
+            "electronics/08_current_conservation.md",
+            "electronics/03_series_parallel.md",
+            "electronics/09_voltage_parallel.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 6.174084031954408
+        },
+        {
+          "id": "H004",
+          "grades": [
+            2,
+            2,
+            1
+          ],
+          "sources": [
+            "electronics/01_closed_circuits.md",
+            "electronics/07_battery_energy.md",
+            "electronics/14_switch_positions.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.6666666666666666,
+          "latency_ms": 6.727500120177865
+        },
+        {
+          "id": "H005",
+          "grades": [
+            1,
+            0,
+            1
+          ],
+          "sources": [
+            "electronics/05_conductors.md",
+            "electronics/06_resistance_ohms_law.md",
+            "electronics/03_series_parallel.md"
+          ],
+          "hit_at_3": 0,
+          "mrr_at_3": 0.0,
+          "precision_at_3": 0.0,
+          "latency_ms": 5.937540903687477
+        },
+        {
+          "id": "H006",
+          "grades": [
+            2,
+            0,
+            0
+          ],
+          "sources": [
+            "electronics/12_meters.md",
+            "electronics/05_conductors.md",
+            "electronics/14_switch_positions.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 6.390790920704603
+        },
+        {
+          "id": "H007",
+          "grades": [
+            2,
+            0,
+            0
+          ],
+          "sources": [
+            "electronics/11_power_energy.md",
+            "electronics/02_voltage_current.md",
+            "electronics/06_resistance_ohms_law.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 6.5200841054320335
+        },
+        {
+          "id": "H008",
+          "grades": [
+            2,
+            0,
+            0
+          ],
+          "sources": [
+            "electronics/13_ground_reference.md",
+            "electronics/08_current_conservation.md",
+            "electronics/04_short_circuits.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 6.305790971964598
+        },
+        {
+          "id": "H009",
+          "grades": [
+            2,
+            1,
+            2
+          ],
+          "sources": [
+            "electronics/03_series_parallel.md",
+            "electronics/01_closed_circuits.md",
+            "electronics/14_switch_positions.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.6666666666666666,
+          "latency_ms": 6.510500097647309
+        },
+        {
+          "id": "H010",
+          "grades": [
+            1,
+            1,
+            0
+          ],
+          "sources": [
+            "electronics/01_closed_circuits.md",
+            "electronics/05_conductors.md",
+            "electronics/03_series_parallel.md"
+          ],
+          "hit_at_3": 0,
+          "mrr_at_3": 0.0,
+          "precision_at_3": 0.0,
+          "latency_ms": 6.6275829449296
+        },
+        {
+          "id": "H011",
+          "grades": [
+            2,
+            0,
+            1
+          ],
+          "sources": [
+            "computer_science/02_recursion.md",
+            "computer_science/04_race_condition.md",
+            "computer_science/07_stack_heap.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 5.500000203028321
+        },
+        {
+          "id": "H012",
+          "grades": [
+            1,
+            0,
+            1
+          ],
+          "sources": [
+            "computer_science/07_stack_heap.md",
+            "computer_science/02_recursion.md",
+            "computer_science/03_data_structures.md"
+          ],
+          "hit_at_3": 0,
+          "mrr_at_3": 0.0,
+          "precision_at_3": 0.0,
+          "latency_ms": 5.448875017464161
+        },
+        {
+          "id": "H013",
+          "grades": [
+            2,
+            1,
+            0
+          ],
+          "sources": [
+            "computer_science/04_race_condition.md",
+            "computer_science/01_threads_mutex.md",
+            "computer_science/02_recursion.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 5.4963750299066305
+        },
+        {
+          "id": "H014",
+          "grades": [
+            2,
+            0,
+            0
+          ],
+          "sources": [
+            "computer_science/05_deadlock.md",
+            "computer_science/01_threads_mutex.md",
+            "computer_science/02_recursion.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 5.138457985594869
+        },
+        {
+          "id": "H015",
+          "grades": [
+            2,
+            1,
+            0
+          ],
+          "sources": [
+            "computer_science/06_process_vs_thread.md",
+            "computer_science/01_threads_mutex.md",
+            "computer_science/05_deadlock.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 5.1608330104500055
+        },
+        {
+          "id": "H016",
+          "grades": [
+            2,
+            1,
+            0
+          ],
+          "sources": [
+            "computer_science/08_hash_table_collisions.md",
+            "computer_science/03_data_structures.md",
+            "computer_science/01_threads_mutex.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 5.472624907270074
+        },
+        {
+          "id": "H017",
+          "grades": [
+            2,
+            2,
+            0
+          ],
+          "sources": [
+            "computer_science/09_binary_search.md",
+            "computer_science/03_data_structures.md",
+            "computer_science/08_hash_table_collisions.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.6666666666666666,
+          "latency_ms": 5.520917009562254
+        },
+        {
+          "id": "H018",
+          "grades": [
+            2,
+            0,
+            0
+          ],
+          "sources": [
+            "computer_science/10_bfs_dfs.md",
+            "computer_science/08_hash_table_collisions.md",
+            "computer_science/09_binary_search.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 6.316249957308173
+        },
+        {
+          "id": "H019",
+          "grades": [
+            2,
+            1,
+            0
+          ],
+          "sources": [
+            "computer_science/11_overfitting.md",
+            "computer_science/12_data_leakage.md",
+            "computer_science/14_rag_grounding.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 5.3498330526053905
+        },
+        {
+          "id": "H020",
+          "grades": [
+            2,
+            0,
+            1
+          ],
+          "sources": [
+            "computer_science/14_rag_grounding.md",
+            "computer_science/03_data_structures.md",
+            "computer_science/13_embeddings.md"
+          ],
+          "hit_at_3": 1,
+          "mrr_at_3": 1.0,
+          "precision_at_3": 0.3333333333333333,
+          "latency_ms": 5.520583828911185
+        }
+      ]
+    }
+  }
+}

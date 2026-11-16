@@ -1,0 +1,20 @@
+{"id":"H001","subject":"electronics","category":"scenario","query":"A student adds a second resistor to the same unbranched loop. The battery voltage stays constant. Should the total current go up or down?"}
+{"id":"H002","subject":"electronics","category":"misconception","query":"Two parallel lamps sit across the same source, but one has more resistance. A classmate insists their currents must be equal. Is that right?"}
+{"id":"H003","subject":"electronics","category":"scenario","query":"At a junction, 0.8 A enters and one exit branch carries 0.3 A. What should the other exit branch carry in steady state, and why?"}
+{"id":"H004","subject":"electronics","category":"misconception","query":"Someone says the battery immediately becomes drained whenever a light switch is turned off. How would you correct them?"}
+{"id":"H005","subject":"electronics","category":"scenario","query":"Two lamps are on one path. If the filament of either lamp breaks, what happens to current through the other lamp?"}
+{"id":"H006","subject":"electronics","category":"misconception","query":"A student places an ideal voltmeter directly in the current path to measure current through a lamp. Which part of this setup is confused?"}
+{"id":"H007","subject":"electronics","category":"scenario","query":"An appliance uses 12 watts for 10 seconds. How many joules of energy were transferred, assuming constant power?"}
+{"id":"H008","subject":"electronics","category":"misconception","query":"A circuit drawing shows a node labeled 0 V. Does that label necessarily establish a physical connection to the soil?"}
+{"id":"H009","subject":"electronics","category":"scenario","query":"There are two separate complete branches with bulbs. A switch disconnects only branch A. Why might bulb B stay on?"}
+{"id":"H010","subject":"electronics","category":"misconception","query":"Someone connects a low-resistance wire around a bulb and says this is identical to breaking the wire. Explain the difference."}
+{"id":"H011","subject":"computer_science","category":"scenario","query":"A function keeps calling itself on smaller inputs. What additional condition guarantees it can eventually stop?"}
+{"id":"H012","subject":"computer_science","category":"misconception","query":"A learner confuses the stack data structure with the memory call stack. Are their uses necessarily the same?"}
+{"id":"H013","subject":"computer_science","category":"scenario","query":"Two workers each read a shared integer, add one, and write back without coordination. Why could the result lose an increment?"}
+{"id":"H014","subject":"computer_science","category":"scenario","query":"Thread A owns lock X and waits for Y; thread B owns Y and waits for X. Name the problem and a standard prevention rule."}
+{"id":"H015","subject":"computer_science","category":"misconception","query":"A programmer assumes two threads in one application each have completely separate global memory. Is that generally true?"}
+{"id":"H016","subject":"computer_science","category":"scenario","query":"A dictionary maps two distinct keys to one hash slot. Does that automatically make either key impossible to look up?"}
+{"id":"H017","subject":"computer_science","category":"misconception","query":"A classmate wants to repeatedly halve an unsorted list to find a target. What hidden assumption makes that unreliable?"}
+{"id":"H018","subject":"computer_science","category":"scenario","query":"In a map with unweighted links, a search visits nearby nodes before farther ones. Why does this help discover a route using the fewest links?"}
+{"id":"H019","subject":"computer_science","category":"scenario","query":"A classifier memorizes peculiarities of training samples and scores badly on fresh examples. What issue does that suggest?"}
+{"id":"H020","subject":"computer_science","category":"misconception","query":"A chatbot cites a retrieved document but makes a statement that document never supports. Has retrieval eliminated the risk of fabrication?"}
