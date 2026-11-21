@@ -1,0 +1,242 @@
+{
+  "a56c7e8289b0": {
+    "mode": "template",
+    "case_id": "F010",
+    "expected_assessment": "correct"
+  },
+  "a6a5bd9716c1": {
+    "mode": "rag",
+    "case_id": "F006",
+    "expected_assessment": "off_topic"
+  },
+  "a49ad701f33a": {
+    "mode": "template",
+    "case_id": "F005",
+    "expected_assessment": "correct"
+  },
+  "69bedccc9a99": {
+    "mode": "rag",
+    "case_id": "F015",
+    "expected_assessment": "incorrect"
+  },
+  "089d7284a937": {
+    "mode": "rag",
+    "case_id": "F012",
+    "expected_assessment": "incorrect"
+  },
+  "e827ceb08d58": {
+    "mode": "llm_only",
+    "case_id": "F010",
+    "expected_assessment": "correct"
+  },
+  "3d74f1d88e17": {
+    "mode": "llm_only",
+    "case_id": "F012",
+    "expected_assessment": "incorrect"
+  },
+  "c73729eae4a8": {
+    "mode": "llm_only",
+    "case_id": "F007",
+    "expected_assessment": "incorrect"
+  },
+  "9c1f9988ee5c": {
+    "mode": "template",
+    "case_id": "F004",
+    "expected_assessment": "incorrect"
+  },
+  "8f5571148ca6": {
+    "mode": "llm_only",
+    "case_id": "F011",
+    "expected_assessment": "incomplete"
+  },
+  "25a155150314": {
+    "mode": "template",
+    "case_id": "F002",
+    "expected_assessment": "correct"
+  },
+  "4ec7a4763db0": {
+    "mode": "rag",
+    "case_id": "F005",
+    "expected_assessment": "correct"
+  },
+  "16c11c9ab39c": {
+    "mode": "llm_only",
+    "case_id": "F006",
+    "expected_assessment": "off_topic"
+  },
+  "2a299c3c016b": {
+    "mode": "template",
+    "case_id": "F006",
+    "expected_assessment": "off_topic"
+  },
+  "644d52a57143": {
+    "mode": "llm_only",
+    "case_id": "F008",
+    "expected_assessment": "correct"
+  },
+  "f8f3fa8db624": {
+    "mode": "template",
+    "case_id": "F016",
+    "expected_assessment": "correct"
+  },
+  "b048e372d236": {
+    "mode": "template",
+    "case_id": "F012",
+    "expected_assessment": "incorrect"
+  },
+  "7ba56aa6e116": {
+    "mode": "llm_only",
+    "case_id": "F016",
+    "expected_assessment": "correct"
+  },
+  "2bb82630bced": {
+    "mode": "rag",
+    "case_id": "F010",
+    "expected_assessment": "correct"
+  },
+  "685a0b8f119e": {
+    "mode": "llm_only",
+    "case_id": "F001",
+    "expected_assessment": "incorrect"
+  },
+  "aed6ee887533": {
+    "mode": "template",
+    "case_id": "F015",
+    "expected_assessment": "incorrect"
+  },
+  "afd9603584e4": {
+    "mode": "rag",
+    "case_id": "F002",
+    "expected_assessment": "correct"
+  },
+  "e15de250b5c5": {
+    "mode": "llm_only",
+    "case_id": "F009",
+    "expected_assessment": "incorrect"
+  },
+  "d16ce8210f34": {
+    "mode": "rag",
+    "case_id": "F014",
+    "expected_assessment": "off_topic"
+  },
+  "59c032b39ada": {
+    "mode": "template",
+    "case_id": "F008",
+    "expected_assessment": "correct"
+  },
+  "4cb84645a16c": {
+    "mode": "llm_only",
+    "case_id": "F013",
+    "expected_assessment": "correct"
+  },
+  "0607511be06d": {
+    "mode": "template",
+    "case_id": "F009",
+    "expected_assessment": "incorrect"
+  },
+  "eaa07c94adcd": {
+    "mode": "rag",
+    "case_id": "F004",
+    "expected_assessment": "incorrect"
+  },
+  "2c5892824550": {
+    "mode": "llm_only",
+    "case_id": "F002",
+    "expected_assessment": "correct"
+  },
+  "8e7806549203": {
+    "mode": "rag",
+    "case_id": "F007",
+    "expected_assessment": "incorrect"
+  },
+  "b97eac7b86c0": {
+    "mode": "llm_only",
+    "case_id": "F005",
+    "expected_assessment": "correct"
+  },
+  "fa07e2a36fd9": {
+    "mode": "template",
+    "case_id": "F013",
+    "expected_assessment": "correct"
+  },
+  "7e827896e46d": {
+    "mode": "rag",
+    "case_id": "F009",
+    "expected_assessment": "incorrect"
+  },
+  "9ada9ebf27a6": {
+    "mode": "template",
+    "case_id": "F011",
+    "expected_assessment": "incomplete"
+  },
+  "15d58a0c059c": {
+    "mode": "llm_only",
+    "case_id": "F014",
+    "expected_assessment": "off_topic"
+  },
+  "bab89f5c0296": {
+    "mode": "template",
+    "case_id": "F014",
+    "expected_assessment": "off_topic"
+  },
+  "1a1d7cb766c0": {
+    "mode": "rag",
+    "case_id": "F003",
+    "expected_assessment": "incomplete"
+  },
+  "4184f89a9372": {
+    "mode": "rag",
+    "case_id": "F013",
+    "expected_assessment": "correct"
+  },
+  "b5304fbcb7ee": {
+    "mode": "template",
+    "case_id": "F003",
+    "expected_assessment": "incomplete"
+  },
+  "0e0f0c4a121b": {
+    "mode": "llm_only",
+    "case_id": "F015",
+    "expected_assessment": "incorrect"
+  },
+  "9299d689b2f4": {
+    "mode": "template",
+    "case_id": "F001",
+    "expected_assessment": "incorrect"
+  },
+  "bb12aab3dd76": {
+    "mode": "rag",
+    "case_id": "F011",
+    "expected_assessment": "incomplete"
+  },
+  "9e5f91bc8251": {
+    "mode": "llm_only",
+    "case_id": "F004",
+    "expected_assessment": "incorrect"
+  },
+  "716fea8c3ac0": {
+    "mode": "rag",
+    "case_id": "F016",
+    "expected_assessment": "correct"
+  },
+  "04fdb282a109": {
+    "mode": "rag",
+    "case_id": "F008",
+    "expected_assessment": "correct"
+  },
+  "92ae99416d5b": {
+    "mode": "rag",
+    "case_id": "F001",
+    "expected_assessment": "incorrect"
+  },
+  "0c0ee0f39ea3": {
+    "mode": "template",
+    "case_id": "F007",
+    "expected_assessment": "incorrect"
+  },
+  "8cf642074f73": {
+    "mode": "llm_only",
+    "case_id": "F003",
+    "expected_assessment": "incomplete"
+  }
+}

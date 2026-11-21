@@ -1,0 +1,33 @@
+{
+  "description": "Human-reviewed Phase 3 development feedback quality; not independent test performance",
+  "modes": {
+    "llm_only": {
+      "count": 16,
+      "mean_scores_out_of_2": {
+        "factual_correctness": 1.125,
+        "usefulness": 1.375,
+        "diagnosis_specificity": 1.125
+      },
+      "development_assessment_match_fraction": 0.5625
+    },
+    "rag": {
+      "count": 16,
+      "mean_scores_out_of_2": {
+        "factual_correctness": 1.25,
+        "usefulness": 1.5625,
+        "diagnosis_specificity": 1.3125,
+        "evidence_support": 1.4375
+      },
+      "development_assessment_match_fraction": 0.5625
+    },
+    "template": {
+      "count": 16,
+      "mean_scores_out_of_2": {
+        "factual_correctness": 0,
+        "usefulness": 1,
+        "diagnosis_specificity": 0
+      },
+      "development_assessment_match_fraction": 0
+    }
+  }
+}
