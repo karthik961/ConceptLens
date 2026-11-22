@@ -7,11 +7,13 @@ from __future__ import annotations
 
 import time
 from src.feedback_schema import FeedbackDraft, abstention, validate_draft
+from src.assessment_checklist import RUBRIC_ADDENDUM
 from src.formatting import make_context, source_name, validate_subject
 from src.retrieval import unique_sources_search
 from src.settings import LLM_MODEL
 
 MODES = ("rag", "llm_only", "template")
+PROMPT_VARIANTS = ("baseline", "checklist")
 
 SYSTEM_PROMPT = """You are ConceptLens, an educational tutor reviewing one short student answer.
 Return the specified structured assessment fields. Your assessment is a provisional
@@ -65,12 +67,18 @@ invent source references or citations. Always return evidence_ids as [].
 """
 
 
-def _messages(subject: str, question: str, answer: str, mode: str, context: str) -> list[tuple[str, str]]:
+def _messages(subject: str, question: str, answer: str, mode: str, context: str,
+              prompt_variant: str = "baseline") -> list[tuple[str, str]]:
+    if prompt_variant not in PROMPT_VARIANTS:
+        raise ValueError(f"Unknown prompt variant: {prompt_variant}")
     policy = RAG_POLICY if mode == "rag" else NO_RAG_POLICY
+    system_prompt = SYSTEM_PROMPT
+    if prompt_variant == "checklist":
+        system_prompt += "\n\n" + RUBRIC_ADDENDUM
     human = (f"Subject: {subject}\nQuestion: {question}\n"
              f"Student answer: {answer}\n\n"
              f"Retrieved evidence:\n{context if mode == 'rag' else '(none)'}")
-    return [("system", SYSTEM_PROMPT + "\n" + policy), ("human", human)]
+    return [("system", system_prompt + "\n" + policy), ("human", human)]
 
 
 def _sources(hits: list[dict]) -> list[dict]:
@@ -115,7 +123,7 @@ def _format_result(mode: str, draft: FeedbackDraft, sources: list[dict], latency
 
 def give_feedback(store, subject: str, question: str, answer: str,
                   k: int = 3, mode: str = "rag", model=None,
-                  retriever=unique_sources_search) -> dict:
+                  retriever=unique_sources_search, *, prompt_variant: str = "baseline") -> dict:
     """Give feedback or abstain; injectable model/retriever enable offline unit tests.
 
     template is intentionally non-diagnostic. llm_only uses identical question/answer
@@ -123,6 +131,8 @@ def give_feedback(store, subject: str, question: str, answer: str,
     subject-matter assessments but optional for purely off-topic judgments.
     """
     validate_subject(subject)
+    if prompt_variant not in PROMPT_VARIANTS:
+        raise ValueError(f"Unknown prompt variant: {prompt_variant}")
     if mode not in MODES:
         raise ValueError(f"Unknown feedback mode: {mode}")
     if not question or not question.strip() or not answer or not answer.strip():
@@ -152,7 +162,8 @@ def give_feedback(store, subject: str, question: str, answer: str,
         model = ChatOllama(model=LLM_MODEL, temperature=0)
     # Ollama offers native JSON-schema structured output via LangChain.
     structured = model.with_structured_output(FeedbackDraft, method="json_schema")
-    messages = _messages(subject, question, answer, mode, make_context(docs) if docs else "")
+    messages = _messages(subject, question, answer, mode, make_context(docs) if docs else "",
+                         prompt_variant=prompt_variant)
     def parse_response(response) -> FeedbackDraft:
         if isinstance(response, FeedbackDraft):
             return response
