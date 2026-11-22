@@ -43,12 +43,19 @@ RAG_POLICY = """Evidence policy: Use ONLY the numbered retrieved passages to jud
 subject-matter correctness. Set evidence_ids to the cited 1-indexed numbers.
 Cite only passages that actually support the assessment and explanation, not merely
 passages containing similar keywords. IMPORTANT: evidence_ids is a REQUIRED JSON field.
-For ANY assessment other than cannot_assess, evidence_ids MUST include at least one
-integer taken from the visible [1], [2], [3] passage numbers, but ONLY if that
-passage actually supports the judgment. A fully supported answer should never use
-an empty evidence_ids array. If no numbered passage supports an assessment, choose
-cannot_assess and set evidence_ids to []. Never fabricate citations, including
-when the student answer is wrong. Do not claim a note was expert-verified.
+For correct, incomplete, or incorrect assessments, evidence_ids MUST include at
+least one integer from the visible numbered passages, but ONLY if that passage
+supports the subject-matter judgment and explanation. If no retrieved passage
+supports such an assessment, choose cannot_assess with evidence_ids=[].
+EXCEPTION: off_topic describes a student answer that is unrelated to the QUESTION;
+that mismatch can be recognized directly without citing reference material.
+For off_topic, evidence_ids=[] is valid, and do NOT change the label to cannot_assess
+merely because no passage discusses the unrelated answer. If giving off_topic with
+no citations, explain only that the answer does not address the question, and ask
+the student to try the question; do not supply uncited subject-matter corrections.
+If you include a subject-matter correction, cite a genuinely supporting passage.
+Never fabricate citations, including when the student answer is wrong.
+Do not claim a note was expert-verified.
 Do not put citation markers in explanation; the application will add validated IDs.
 """
 
@@ -112,7 +119,8 @@ def give_feedback(store, subject: str, question: str, answer: str,
     """Give feedback or abstain; injectable model/retriever enable offline unit tests.
 
     template is intentionally non-diagnostic. llm_only uses identical question/answer
-    with no passages. rag retrieves by question only and requires valid citations.
+    with no passages. rag retrieves by question only; citations are required for
+    subject-matter assessments but optional for purely off-topic judgments.
     """
     validate_subject(subject)
     if mode not in MODES:
@@ -156,7 +164,7 @@ def give_feedback(store, subject: str, question: str, answer: str,
     # Local 3B models sometimes omit evidence_ids despite having adequate evidence.
     # Ask once more instead of assigning a citation ourselves. This retry is not
     # triggered by genuine cannot_assess or by fabricated/out-of-range references.
-    if mode == "rag" and draft.assessment != "cannot_assess" and not draft.evidence_ids:
+    if mode == "rag" and draft.assessment in {"correct", "incomplete", "incorrect"} and not draft.evidence_ids:
         allowed = ", ".join(str(i) for i in range(1, len(sources) + 1))
         retry_instruction = (
             "Reconsider your previous assessment. Your evidence_ids was empty. "

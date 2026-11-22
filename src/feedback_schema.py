@@ -14,7 +14,7 @@ class FeedbackDraft(BaseModel):
     misconception: str = Field(description="A possible misconception, or empty if none is supported", max_length=400)
     explanation: str = Field(description="One to four concise, student-facing sentences", min_length=1, max_length=1300)
     next_step_hint: str = Field(description="One constructive revision prompt or next step", min_length=1, max_length=500)
-    evidence_ids: list[int] = Field(..., description="Required: 1-indexed IDs of passages actually supporting the assessment; [] only if no passages support a judgment or no retrieval was used")
+    evidence_ids: list[int] = Field(..., description="Required field. For RAG correct/incomplete/incorrect, cite supporting 1-indexed passage IDs; for off_topic or cannot_assess, [] is allowed; without retrieval, [].")
 
 
 def validate_draft(draft: FeedbackDraft, mode: str, source_count: int) -> FeedbackDraft:
@@ -45,7 +45,10 @@ def validate_draft(draft: FeedbackDraft, mode: str, source_count: int) -> Feedba
     bad_ids = any(not (1 <= value <= source_count) for value in draft.evidence_ids)
     if bad_ids:
         return abstention("The model referenced a passage that was not retrieved. Its assessment cannot be verified.")
-    if draft.assessment != "cannot_assess" and not draft.evidence_ids:
+    # Topic mismatch is determined by comparing the question and student answer.
+    # It does not require evidence about the subject matter. A generated factual
+    # correction, if provided, should still cite a source (prompt-level guidance).
+    if draft.assessment in {"correct", "incomplete", "incorrect"} and not draft.evidence_ids:
         return abstention("The model gave no supporting passage for its assessment.")
     # Deduplicate while preserving first-seen citation order.
     deduped = list(dict.fromkeys(draft.evidence_ids))
