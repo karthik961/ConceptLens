@@ -71,7 +71,7 @@ def load_uploaded_file(filename: str, raw: bytes, subject: str) -> list[Document
 def index_documents(store: Chroma, docs: list[Document]) -> int:
     if not docs:
         return 0
-    splitter = RecursiveCharacterTextSplitter(chunk_size=650, chunk_overlap=100)
+    splitter = RecursiveCharacterTextSplitter(chunk_size=1100, chunk_overlap=100)
     chunks = [c for c in splitter.split_documents(docs) if c.page_content.strip()]
     ids = [document_id(c.metadata["subject"], c.metadata["source"], str(c.metadata.get("page", "")), c.page_content) for c in chunks]
     if chunks:
