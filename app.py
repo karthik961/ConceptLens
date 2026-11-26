@@ -2,12 +2,13 @@
 import streamlit as st
 
 from src.knowledge import create_store, index_documents, load_uploaded_file
-from src.rag import give_feedback
+from src.feedback_engine import give_feedback
+from langchain_ollama import ChatOllama
 from src.settings import SUBJECTS
 
 st.set_page_config(page_title="ConceptLens", page_icon="📚", layout="centered")
 st.title("ConceptLens")
-st.caption("CS 678 · Local, evidence-grounded student feedback · Research prototype")
+st.caption("CS 678 · Qwen2.5 7B · Checklist prompt · Semantic RAG (k=4) · Research prototype")
 
 @st.cache_resource(show_spinner="Loading local sentence embeddings and Chroma index...")
 def local_store():
@@ -56,7 +57,11 @@ if st.button("Generate feedback", type="primary"):
             with st.spinner("Assessing the answer using the selected approach..."):
                 result = give_feedback(
                     local_store() if mode == "rag" else None,
-                    subject, question, answer, mode=mode,
+                    subject, question, answer,
+                    k=4,
+                    mode=mode,
+                    model=ChatOllama(model="qwen2.5:7b", temperature=0) if mode != "template" else None,
+                    prompt_variant="checklist",
                 )
             st.subheader("Assessment")
             st.write(result["assessment"].replace("_", " ").capitalize())
