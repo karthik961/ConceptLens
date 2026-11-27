@@ -1,0 +1,101 @@
+{
+  "abstentions": 4,
+  "accuracy": 0.8020833333333334,
+  "by_group": {
+    "computer_science": {
+      "accuracy": 0.7916666666666666,
+      "correct": 38,
+      "total": 48
+    },
+    "computer_science/correct": {
+      "accuracy": 0.6666666666666666,
+      "correct": 8,
+      "total": 12
+    },
+    "computer_science/incomplete": {
+      "accuracy": 0.75,
+      "correct": 9,
+      "total": 12
+    },
+    "computer_science/incorrect": {
+      "accuracy": 1.0,
+      "correct": 12,
+      "total": 12
+    },
+    "computer_science/off_topic": {
+      "accuracy": 0.75,
+      "correct": 9,
+      "total": 12
+    },
+    "correct": {
+      "accuracy": 0.7916666666666666,
+      "correct": 19,
+      "total": 24
+    },
+    "electronics": {
+      "accuracy": 0.8125,
+      "correct": 39,
+      "total": 48
+    },
+    "electronics/correct": {
+      "accuracy": 0.9166666666666666,
+      "correct": 11,
+      "total": 12
+    },
+    "electronics/incomplete": {
+      "accuracy": 0.75,
+      "correct": 9,
+      "total": 12
+    },
+    "electronics/incorrect": {
+      "accuracy": 0.9166666666666666,
+      "correct": 11,
+      "total": 12
+    },
+    "electronics/off_topic": {
+      "accuracy": 0.6666666666666666,
+      "correct": 8,
+      "total": 12
+    },
+    "incomplete": {
+      "accuracy": 0.75,
+      "correct": 18,
+      "total": 24
+    },
+    "incorrect": {
+      "accuracy": 0.9583333333333334,
+      "correct": 23,
+      "total": 24
+    },
+    "off_topic": {
+      "accuracy": 0.7083333333333334,
+      "correct": 17,
+      "total": 24
+    },
+    "overall": {
+      "accuracy": 0.8020833333333334,
+      "correct": 77,
+      "total": 96
+    }
+  },
+  "confusion": {
+    "correct->correct": 19,
+    "correct->incomplete": 5,
+    "incomplete->correct": 4,
+    "incomplete->incomplete": 18,
+    "incomplete->incorrect": 2,
+    "incorrect->correct": 1,
+    "incorrect->incorrect": 23,
+    "off_topic->cannot_assess": 4,
+    "off_topic->incomplete": 1,
+    "off_topic->incorrect": 2,
+    "off_topic->off_topic": 17
+  },
+  "correct": 77,
+  "note": "Project-authored, topic-clustered sample: intervals are descriptive, not a guarantee of generalization. Citation support must be human-rated.",
+  "total": 96,
+  "wilson_95_descriptive": [
+    0.7114483305401282,
+    0.8694726684625274
+  ]
+}

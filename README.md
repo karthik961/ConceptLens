@@ -1,132 +1,126 @@
-# ConceptLens — CS 678 NLP Project
+# ConceptLens — Evidence-Grounded Short-Answer Feedback
 
-**A local, subject-switchable learning assistant that uses retrieval-augmented generation (RAG) to give grounded feedback on short student answers.**
+**ConceptLens** is a local educational NLP prototype that analyzes a student's short answer and generates a **provisional** assessment, a possible misconception, a concise explanation, and a revision hint. When evidence is available, it also displays the retrieved teaching passages selected by the model.
 
-This is a **starter implementation**, not a validated grading system. Main approach: classification-free RAG. The separate five-way classifier is a **future ablation**, not a mandatory gate in the inference pipeline.
+Built for **CS 678** using a retrieval-augmented generation (RAG) pipeline. **It is not an automated grading system** and its assessments and citations can be wrong.
 
-## Tech stack
-- Python 3.11 or 3.12, Streamlit
-- LangChain core, `langchain-chroma`, `langchain-huggingface`, `langchain-ollama`, `langchain-text-splitters`
-- Chroma persistent vector database; `sentence-transformers/all-MiniLM-L6-v2` (local embeddings)
-- Ollama `qwen2.5:3b` (local inference; check Qwen Research License for your usage)
-- BEETLE dataset (`nkazi/Beetle`) for later benchmarking; it is **not** automatically indexed
+## Research result at a glance
 
-## 1. Install prerequisites on your Mac
+| Measure | Observed result | Scope |
+| --- | ---: | --- |
+| **Assessment agreement** | **80.2% (77/96)** | One-time, frozen, project-authored/author-reviewed short-answer test |
+| Computer Science | 79.2% (38/48) | Same 96-case test |
+| Electronics | 81.2% (39/48) | Same 96-case test |
+| Incorrect-answer agreement | 95.8% (23/24) | Category-level agreement |
+| Off-topic agreement | 70.8% (17/24) | Category-level agreement |
+| Abstentions | 4/96 | `cannot_assess` predictions |
+| **Fully supported citations** | **69.3% (52/75)** | **Preliminary AI-assisted review** of responses with citations; NOT an independently verified human metric |
 
-1. Install **Python 3.11 or 3.12**, e.g., `brew install python@3.12`. Check `python3 --version`. If `python3` resolves to a different version, use `python3.12` below.
-2. Install **Ollama** from https://ollama.com/download and launch it. In a fresh Terminal:
+The project's aspirational assessment target was 85–90%; **it was not achieved**. The descriptive 95% Wilson interval for assessment agreement is 71.1%–86.9%; the examples are topic-clustered and not independently sampled real student submissions, so this interval does **not** establish real-world accuracy.
 
-```bash
-ollama pull qwen2.5:3b
-ollama run qwen2.5:3b 'Reply with one sentence explaining a closed circuit.'
-```
+Read [the final evaluation and limitations](docs/FINAL_EVALUATION.md) and [the reproducibility guide](docs/REPRODUCIBILITY.md).
 
-Ollama runs at `http://localhost:11434` by default. If requests to localhost fail, open the Ollama application or run `ollama serve` in a separate terminal if it is not already running.
-
-## 2. Set up your project
-
-```bash
-cd ConceptLens_Starter
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-```
-
-To inspect the *benchmark* dataset separately (requires internet once):
-
-```bash
-python -m scripts.inspect_beetle
-```
-
-This fetches the licensed dataset from Hugging Face, prints sizes/label distribution, and caches it under `data/beetle/`. The directory is deliberately NOT fed into Chroma. Keep official `test_ua` and `test_uq` untouched until final experiments.
-
-## 3. Index the sample knowledge notes
-
-```bash
-python -m scripts.index_knowledge --reset
-```
-
-This downloads the embedding model on first run and indexes the **illustrative, project-authored** lessons in `knowledge/`. `--reset` removes the existing local index (including anything previously uploaded); use it ONLY when you want to rebuild from scratch. For later additions use the script without `--reset`.
-
-## 4. Launch and try the app
-
-```bash
-streamlit run app.py
-```
-
-In your browser, choose **Electronics** and try:
-
-- Question: `Why does a bulb stop glowing when a circuit is open?`
-- Student answer: `Because the battery has run out of electricity.`
-
-The system should retrieve locally indexed explanations, call Qwen2.5 3B, and display a short feedback response with the retrieved source passages. This is a smoke test, NOT measured educational correctness.
-
-Try **Computer Science** as a second subject. You may upload `.md`, `.txt`, or text-based `.pdf` learning notes; they are added to the **local**, persisted index for the selected subject. Scanned/image-only PDFs need OCR, which is deliberately not included.
-
-## Repo contents
+## How it works
 
 ```text
-ConceptLens_Starter/
-├── app.py                       # Streamlit UI, subject selection, uploads
-├── requirements.txt
-├── src/
-│   ├── settings.py              # Model/config/paths
-│   ├── knowledge.py             # Load/split/index notes; deterministic IDs
-│   ├── rag.py                   # Retrieval → cited prompt → Ollama feedback
-│   └── formatting.py            # Prompt context, domain validation, hashing
-├── scripts/
-│   ├── index_knowledge.py       # Build local Chroma DB
-│   └── inspect_beetle.py        # Obtain and inspect held-out dataset
-├── knowledge/
-│   ├── electronics/             # Original demonstrative notes
-│   └── computer_science/        # Original demonstrative notes
-└── tests/                       # Stdlib tests for prompt formatting
+Student's subject + question + answer
+                |
+                v
+MiniLM embeddings -> Chroma vector search (subject-filtered)
+                |
+        top 4 distinct passages
+                |
+                v
+Qwen2.5 7B via Ollama + checklist assessment prompt
+                |
+                v
+Structured response (Pydantic schema)
+                |
+                v
+Citation-ID and output validation (structural, NOT factual entailment)
+                |
+                v
+Streamlit: assessment / possible misconception / explanation / revision hint / source passages
 ```
 
-## Important scientific restrictions
+**Final evaluated configuration**: `qwen2.5:7b`, temperature `0`, `prompt_variant="checklist"`, semantic retrieval `k=4`, 1,100-character chunks with 100-character overlap, `sentence-transformers/all-MiniLM-L6-v2`, and Chroma persisted at `.chromadb_1100/`. The app explicitly passes the evaluated model and prompt in `app.py`. The older shared default in `src/settings.py` refers to the historical 3B experimental baseline and should not be interpreted as the Streamlit configuration.
 
-1. **Prevent benchmark leakage.** Do NOT build the RAG knowledge store from official BEETLE student answers, reference answers tied to test items, gold labels, or test files. Curate independent, attributable concept-level educational passages. `knowledge/` is only an illustration, not your final 20–40-passage corpus.
-2. **Do not mistake RAG output for a correct judgment.** The model can hallucinate even when sources are retrieved. Human-review at least 40–60 outputs, including correct, partially correct, and incorrect answers, and report failures.
-3. **Do not present classifier accuracy for the classification-free RAG system.** Add a separate classifier later and compare it as an ablation; the main system is evaluated by retrieval relevance, groundedness, and feedback usefulness.
-4. **Make controlled comparisons:** template feedback, the same Qwen model without retrieval, Qwen + RAG, and (if time) Qwen + RAG + predicted classification.
-5. **Dataset split integrity:** Train and validate on `train`; reserve `test_ua` and `test_uq` for the final reported held-out tests. For the RAG evaluation, use independently curated topical evidence not answer-label lookups.
-6. **License and sources:** BEETLE's hosted release is CC BY 4.0 (credit source); Qwen2.5 3B has a Qwen Research License, not Apache 2.0.
-7. **Domain independence ≠ equal benchmark coverage.** The example CS topic switch works, but only Electronics can be quantitatively benchmarked against BEETLE until a comparable CS evaluation set is created.
+Subjects: **Computer Science** (14 project-authored concept notes) and **Electronics** (18 notes). Supplementary reading links in `knowledge/catalog.json` do **not** mean every note has been independently checked by a subject expert.
 
-## Suggested next experiments
+## Run locally (Mac or compatible workstation)
 
-- Expand to 20–40 independently curated and cited concept passages covering 8–12 BEETLE-compatible electricity questions.
-- Label 30–50 question/passage relevance pairs and calculate Recall@3 / MRR.
-- Add a deterministic no-retrieval Qwen baseline and a template baseline, using identical test questions and judge rubric.
-- Sample 40–60 prompts for human review: factual correctness, helpfulness, coverage, and unsupported claims.
-- Train sentence-embedding + logistic-regression **five-way** classifier using only train split as an optional ablation.
-- Report failures explicitly. Do not claim the system reliably identifies misconceptions before testing.
+Prerequisites: Python **3.11 or 3.12** recommended by this repo's requirements, Ollama installed, and sufficient RAM for the approximately 4.7-GB quantized Qwen2.5 7B model. A fast GPU/Apple Silicon helps; CPU-only may be slow.
 
-## Troubleshooting
+```bash
+# Clone if necessary, then cd into the repository
+python3.12 -m venv .venv                # use an available supported Python interpreter
+source .venv/bin/activate
+python -m pip install -r requirements.txt
 
-- `ModuleNotFoundError`: activate `.venv` and reinstall dependencies.
-- `Connection refused` on port `11434`: start Ollama.
-- `model not found`: run `ollama pull qwen2.5:3b`.
-- First index slow: Sentence Transformers downloads MiniLM once and computes embeddings locally.
-- No relevant passages: confirm `python -m scripts.index_knowledge --reset` ran and you're using the matching subject.
-- Apple Silicon/Python compatibility issues: try supported Python 3.11/3.12 in a clean venv. Avoid installing an unspecified bleeding-edge Python version.
-- Tests (no model download): `python -m unittest discover -s tests -v`.
+ollama pull qwen2.5:7b
+ollama list
 
-## Sources
+# From a clean clone, index the 32 curated notes into .chromadb_1100/
+python -m scripts.index_knowledge
 
-- Dataset: https://huggingface.co/datasets/nkazi/Beetle
-- SemEval-2013 Task 7 paper: https://aclanthology.org/S13-2045/
-- LangChain Chroma: https://docs.langchain.com/oss/python/integrations/vectorstores/chroma
-- LangChain ChatOllama: https://docs.langchain.com/oss/python/integrations/chat/ollama
-- LangChain local Hugging Face embeddings: https://docs.langchain.com/oss/python/integrations/embeddings/huggingfacehub
-- Ollama Qwen2.5: https://ollama.com/library/qwen2.5
+python -m streamlit run app.py
+```
 
+Open `http://localhost:8501`. If you already have a populated `.chromadb_1100/` database, you ordinarily **do not** need to reindex it. Avoid `python -m scripts.index_knowledge --reset` unless you intend to destroy that local index, including previously uploaded notes.
 
-## Phase 2 retrieval evaluation (completed)
+### Example input
 
-Read [PHASE2_RESULTS.md](PHASE2_RESULTS.md) for the frozen development and held-out comparisons, reproducibility commands, known failures, source-review limitations, and how the default retriever was selected. On 20 held-out questions, both semantic-only and hybrid retrieval achieved **85.0% Hit@3**; semantic-only had slightly higher MRR@3 (0.817 versus 0.800), so semantic-only remains the default. These are document-retrieval metrics, not grading accuracy.
+- **Subject:** Computer Science
+- **Question:** Why might two threads need a mutex when updating shared data?
+- **Student answer:** Because threads always run one after another.
+- **Expected qualitative behavior:** `incorrect`; explain that threads can overlap and need synchronization to avoid race conditions, with relevant passages displayed.
 
-The 32 project-authored knowledge notes have supporting-reading URLs in [knowledge/catalog.json](knowledge/catalog.json). The notes have **not** yet undergone independent subject-expert verification; this metadata update does not change the tested text corpus. Prior results and associated code are frozen at commit `cb9a846c4d41b5f80c303391db63b85c8870dbc4`.
+For demonstration, use the **Evidence-grounded RAG** mode. `Qwen without retrieval` and `Generic feedback template` are comparison modes and should not be presented as equivalent to the evaluated RAG configuration. Scanned PDFs are not supported; uploaded learning notes are stored in the local Chroma database and **change the retrieval corpus**, so they are not part of the frozen 96-case result.
 
-For the full project, Phase 3 concerns feedback correctness and misconception assessment; the retrieval evaluation cannot establish either on its own.
+## Repository map
+
+| Path | Purpose |
+| --- | --- |
+| `app.py` | Streamlit user interface, explicitly uses 7B + checklist + `k=4` |
+| `src/feedback_engine.py` | RAG retrieval, structured model generation, retry and validation |
+| `src/feedback_schema.py` | Output schema and citation-ID validation |
+| `src/assessment_checklist.py` | Question-coverage and assessment-label checklist |
+| `src/retrieval.py` | Subject-filtered semantic search with unique sources |
+| `src/knowledge.py` | Curated-note ingestion and 1,100-character chunking |
+| `knowledge/` | 32 project-authored teaching notes plus source catalog |
+| `scripts/index_knowledge.py` | Build local Chroma index |
+| `scripts/prepare_phase3_final.py` | Freeze final test contexts and manifest from reviewed labels |
+| `scripts/run_phase3_final.py` | Hopper inference on frozen contexts |
+| `scripts/score_phase3_final.py` | Score downloaded predictions against local gold labels |
+| `eval/phase3_final_report_summary.json` | Observed final label metrics |
+| `docs/FINAL_EVALUATION.md` | Final experimental results, audit, and limitations |
+| `docs/REPRODUCIBILITY.md` | How to reproduce a **new** run and interpret archived outputs |
+
+## Run tests
+
+```bash
+source .venv/bin/activate
+python -m unittest discover -s tests -v
+python -m scripts.verify_published_results
+python -m py_compile app.py
+```
+
+`verify_published_results` checks consistency between the archived case-level results and reported metrics; **it does not rerun Qwen or independently validate gold labels**.
+
+## Research limitations
+
+1. **Assessment agreement is not human-verified grading accuracy.** The 96-case test uses project-authored, topic-clustered answers with author-reviewed gold labels. It is not a representative sample of real classroom responses.
+2. **Citation existence is not citation support.** The validator checks citation indices; it cannot determine whether the cited text entails the model's claims. The 69.3% figure is an AI-assisted, preliminary qualitative assessment.
+3. **False positives and contradictions occur.** In one final case, an Ohm's-law response was labeled `correct` while the explanation contradicted that label. The system can overstate omissions and mishandle some off-topic answers.
+4. **Experimental provenance matters.** The 16-case development result was 16/16 and the 40-case post-fix diagnostic result was 31/40; neither is the final unseen estimate. The final one-time test was 77/96.
+5. **Do not tune against the final test.** Improvements to the model, prompt, corpus or retrieval require a separate future development set and fresh evaluation. UI-only changes do not alter the *historical* result but still require functional tests.
+6. **Local-only runtime.** A public GitHub repo or a public Streamlit URL does not imply the Ollama model can be served without an accessible local inference backend.
+
+## Project history and references
+
+- [Phase 2 retrieval study](PHASE2_RESULTS.md) — historical semantic vs hybrid retrieval experiments.
+- [Phase 3 development notes](PHASE3_README.md) — **historical** instructions for an earlier 3B variant, not final setup.
+- [BEETLE dataset](https://huggingface.co/datasets/nkazi/Beetle) — background resource; the final 96-case benchmark is **not** a BEETLE test result.
+- [LangChain / Ollama integration](https://python.langchain.com/docs/integrations/chat/ollama/) and [Ollama Qwen2.5](https://ollama.com/library/qwen2.5).
+
+This repository currently has no explicit license file. Public source availability does not, by itself, confer an open-source reuse license.

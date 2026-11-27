@@ -20,3 +20,11 @@ data/uploads/
 
 # Extracted experiment folder (after merging code)
 ConceptLens_Phase2_Hybrid_Experiment/
+
+# Local indexes and private experiment artifacts
+.chromadb_1100/
+eval/phase3_final_gold_LOCAL_ONLY.csv
+backups/
+*.pre_checklist.bak
+*.before_*.bak
+*.bak
