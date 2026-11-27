@@ -82,7 +82,7 @@ Notable problematic feedback includes **Z01C, Z03C, Z09C, Z12C, and Z16C** (clai
 
 **Phase 3 experimental evaluation may be closed** with the accuracy and these explicitly labeled preliminary qualitative findings. If the course requires human-validated citation-quality statistics, the attached 96-row audit should be independently checked before those figures enter the final report as verified results.
 
-**Phase 4:** Connect the Streamlit interface to `src.feedback_engine.give_feedback` (the earlier `app.py` uses `src.rag.give_feedback`), make Qwen2.5 7B and `prompt_variant="checklist"` explicit, set `k=4`, ensure the correct `.chromadb_1100` index, show citation passages and warnings, and run end-to-end UI tests. Hopper inference may require a reachable model service; a local Mac demo is not automatically backed by Hopper.
+**Phase 4 (completed):** The redesigned Streamlit application calls `src.feedback_engine.give_feedback` with an explicit local Ollama `qwen2.5:7b` model at temperature 0, `prompt_variant="checklist"`, and semantic retrieval `k=4` from `.chromadb_1100`. The UI displays provisional assessments, explanations, revision hints, and model-selected citations separately from other retrieved passages; it also offers demonstration examples and Markdown feedback export. The application was smoke-tested locally on a Mac with Ollama GPU inference, including multiple expected assessment categories and an Electronics example. These functional checks are **not** a new quantitative evaluation or independent verification of citation support.
 
 **Phase 5:** Final project report and demo with reproducible run instructions, the frozen configuration, performance table, citation examples, limitations, and evidence provenance.
 
