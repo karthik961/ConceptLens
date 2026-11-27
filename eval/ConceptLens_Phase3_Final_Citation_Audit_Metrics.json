@@ -1,0 +1,54 @@
+{
+  "case_count": 96,
+  "assessment_matches": 77,
+  "cited_responses": 75,
+  "uncited_responses": 21,
+  "uncited_off_topic": 17,
+  "uncited_cannot_assess": 4,
+  "citation_support_counts_0_1_2": {
+    "0": 4,
+    "1": 19,
+    "2": 52
+  },
+  "factual_feedback_counts_0_1_2": {
+    "0": 7,
+    "1": 17,
+    "2": 72
+  },
+  "full_support_rate_among_cited": 0.6933333333333334,
+  "full_or_partial_support_rate_among_cited": 0.9466666666666667,
+  "factual_full_rate_all_cases": 0.75,
+  "by_subject": {
+    "computer_science": {
+      "cases": 48,
+      "assessment_matches": 38,
+      "cited_responses": 38,
+      "citation_support": {
+        "0": 3,
+        "1": 9,
+        "2": 26
+      },
+      "factual_feedback": {
+        "0": 5,
+        "1": 6,
+        "2": 37
+      }
+    },
+    "electronics": {
+      "cases": 48,
+      "assessment_matches": 39,
+      "cited_responses": 37,
+      "citation_support": {
+        "0": 1,
+        "1": 10,
+        "2": 26
+      },
+      "factual_feedback": {
+        "0": 2,
+        "1": 11,
+        "2": 35
+      }
+    }
+  },
+  "scope": "AI-assisted provisional judgments over project-authored benchmark; not human-blind ratings; manual check needed."
+}
